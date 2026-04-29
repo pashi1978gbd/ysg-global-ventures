@@ -1,179 +1,190 @@
 <!DOCTYPE html>
+
 <html>
 <head>
     <title>YSG Global Ventures</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+```
+<!-- Favicon (tab icon) -->
+<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
 
-    <style>
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
 
-	html {
-    	    scroll-behavior: smooth;
-	}
+<style>
 
-        body {
-            margin: 0;
-            font-family: Inter, sans-serif;
-            color: #111;
-        }
+    html {
+        scroll-behavior: smooth;
+    }
 
+    body {
+        margin: 0;
+        font-family: 'Inter', sans-serif;
+        color: #111;
+        background: #f5f7fb;
+    }
+
+    /* HEADER */
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 18px 60px;
+        background: #0b1f3a;
+        color: white;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+    }
+
+    .logo-text {
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    nav a {
+        margin-left: 30px;
+        text-decoration: none;
+        color: #d1d9e6;
+        font-size: 14px;
+        transition: 0.3s;
+    }
+
+    nav a:hover {
+        color: white;
+    }
+
+    /* HERO */
+    .hero {
+        text-align: center;
+        padding: 180px 20px 140px;
+        background: linear-gradient(135deg, #0b1f3a, #163a63);
+        color: #ffffff;
+    }
+
+    .hero h2 {
+        font-size: 52px;
+        margin-bottom: 20px;
+        line-height: 1.2;
+    }
+
+    .hero p {
+        font-size: 18px;
+        max-width: 700px;
+        margin: 0 auto;
+        color: #d1d9e6;
+    }
+
+    .cta-button {
+        display: inline-block;
+        margin-top: 30px;
+        padding: 12px 28px;
+        background: #ffffff;
+        color: #0b1f3a;
+        text-decoration: none;
+        border-radius: 6px;
+        font-weight: bold;
+        transition: all 0.3s ease;
+    }
+
+    .cta-button:hover {
+        background: #e6e6e6;
+        transform: translateY(-2px);
+    }
+
+    /* SECTIONS */
+    section {
+        padding: 120px 20px;
+        text-align: center;
+        background: white;
+    }
+
+    section:not(.hero) {
+        max-width: 1200px;
+        margin: 30px auto;
+    }
+
+    section:nth-child(even):not(.hero) {
+        background: #f0f3f8;
+    }
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 50px;
+        font-weight: 600;
+    }
+
+    p {
+        font-size: 16px;
+        line-height: 1.7;
+        color: #444;
+    }
+
+    /* CARDS */
+    .imprint-container,
+    .publishing-container {
+        display: flex;
+        justify-content: center;
+        gap: 60px;
+        flex-wrap: wrap;
+        margin-top: 40px;
+    }
+
+    .card {
+        max-width: 320px;
+        padding: 30px 25px;
+        border-radius: 12px;
+        background: #ffffff;
+        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        transition: 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-5px);
+    }
+
+    .card p {
+        color: #555;
+    }
+
+    /* FOOTER */
+    footer {
+        background: #0b1f3a;
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    footer p {
+        color: #ffffff;
+        opacity: 0.9;
+        margin: 6px 0;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
         header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 18px 60px;
-            background: #0b1f3a;
-            color: white;
-	    border-bottom: 1px solid rgba(255,255,255,0.08);
-
-	    position: sticky;
-	    top: 0;
-	    z-index: 1000;
+            flex-direction: column;
+            padding: 20px;
         }
 
-	.hero {
-    	    margin-top: 0;
-	}
-
-        .logo {
-            height: 60px;
-            width: auto;
-            display: block;
-	    background: none;
+        nav {
+            margin-top: 10px;
         }
 
-	.logo-text {
-    	    font-size: 22px;
-    	    font-weight: 600;
-    	    letter-spacing: 1.2px;
-    	    color: white;
-	}
-
-        nav a {
-    	    margin-left: 30px;
-    	    text-decoration: none;
-    	    color: #d1d9e6;
-    	    font-size: 14px;
-    	    transition: 0.3s;
-	}
-
-	nav a:hover {
-    	    color: white;
-	}
-
-        .hero {
-    	    background: linear-gradient(135deg, #0b1f3a, #163a63);
-    	    color: #ffffff;
-    	    text-align: center;
-    	    padding: 180px 20px 140px;
-	}
-
-	.hero h2 {
-    	    font-size: 56px;
-    	    margin-bottom: 20px;
-    	    line-height: 1.2;
-    	    font-weight: 600;
-	}
-
-	.hero p {
-    	    font-size: 18px;
-    	    max-width: 720px;
-    	    margin: 0 auto;
-    	    color: #d1d9e6;
-	}
-
-	.cta-button {
-    	    display: inline-block;
-    	    margin-top: 35px;
-    	    padding: 14px 32px;
-    	    background: #ffffff;
-    	    color: #0b1f3a;
-    	    text-decoration: none;
-    	    border-radius: 6px;
-    	    font-weight: 600;
-    	    transition: 0.3s;
-	}
-
-	.cta-button:hover {
-    	    background: #e6e6e6;
-	}
-
-        section {
-            padding: 120px 20px;
-            text-align: center;
-        }
-	
-	section:not(.hero) {
-    	    max-width: 1200px;
-    	    margin: auto;
-	}
-
-	section:not(.hero):nth-child(even) {
-    	    background: #f0f3f8;
-	}
-
-        h2 {
-            font-size: 36px;
-            margin-bottom: 50px;
-	    font-weight: 600;
+        .hero h2 {
+            font-size: 32px;
         }
 
         .imprint-container,
         .publishing-container {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
         }
+    }
 
-        .card {
-    	    max-width: 320px;
-    	    padding: 30px 25px;
-    	    border-radius: 12px;
-    	    background: #ffffff;
-    	    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    	    transition: 0.3s;
-	}
+</style>
+```
 
-        .card p {
-            color: #555;
-            line-height: 1.6;
-        }
-
-	.card:hover {
-    	    transform: translateY(-8px);
-    	    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
-	}
-
-        footer {
-            background: #0b1f3a;
-            color: white;
-            text-align: center;
-            padding: 40px 20px;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                padding: 20px;
-            }
-
-            nav {
-                margin-top: 10px;
-            }
-
-            .hero h2 {
-                font-size: 32px;
-            }
-
-            .imprint-container,
-            .publishing-container {
-                flex-direction: column;
-                align-items: center;
-            }
-        }
-
-    </style>
 </head>
 
 <body>
@@ -181,13 +192,16 @@
 <header>
     <div class="logo-text">YSG Global Ventures</div>
 
-    <nav>
-        <a href="#">Home</a>
-        <a href="#">About</a>
-        <a href="#">Publishing</a>
-        <a href="#">Imprints</a>
-        <a href="#">Contact</a>
-    </nav>
+```
+<nav>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#publishing">Publishing</a>
+    <a href="#imprints">Imprints</a>
+    <a href="#contact">Contact</a>
+</nav>
+```
+
 </header>
 
 <section class="hero">
@@ -197,82 +211,97 @@
         knowledge development, and long-term value creation.
     </p>
 
-    <a href="#contact" class="cta-button">Start Your Publishing Journey</a>
+```
+<a href="#contact" class="cta-button">Start Your Publishing Journey</a>
+```
+
 </section>
 
-<section>
+<section id="imprints">
     <h2>Our Imprints</h2>
 
-    <div class="imprint-container">
-        <div class="card">
-            <h3>Skanda Global Publishing</h3>
-            <p>
-                A premium imprint representing legacy, depth, and long-term value creation in publishing.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>YS Global Publications</h3>
-            <p>
-                A corporate imprint focused on structured publishing, clarity, and global reach.
-            </p>
-        </div>
+```
+<div class="imprint-container">
+    <div class="card">
+        <h3>Skanda Global Publishing</h3>
+        <p>
+            A premium imprint representing legacy, depth, and long-term value creation in publishing.
+        </p>
     </div>
+
+    <div class="card">
+        <h3>YS Global Publications</h3>
+        <p>
+            A corporate imprint focused on structured publishing, clarity, and global reach.
+        </p>
+    </div>
+</div>
+```
+
 </section>
 
-<section>
+<section id="publishing">
     <h2>Publishing</h2>
 
-    <div class="publishing-container">
-        <div class="card">
-            <h3>Author Publishing</h3>
-            <p>
-                We help authors transform ideas into professionally published books,
-                guiding them from manuscript to global distribution.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Corporate Publishing</h3>
-            <p>
-                Structured publishing solutions for organizations to present knowledge,
-                training materials, and brand narratives.
-            </p>
-        </div>
-
-        <div class="card">
-            <h3>Knowledge Products</h3>
-            <p>
-                Development of specialized content including technical guides,
-                learning modules, and domain-focused publications.
-            </p>
-        </div>
+```
+<div class="publishing-container">
+    <div class="card">
+        <h3>Author Publishing</h3>
+        <p>
+            We help authors transform ideas into professionally published books,
+            guiding them from manuscript to global distribution.
+        </p>
     </div>
+
+    <div class="card">
+        <h3>Corporate Publishing</h3>
+        <p>
+            Structured publishing solutions for organizations to present knowledge,
+            training materials, and brand narratives.
+        </p>
+    </div>
+
+    <div class="card">
+        <h3>Knowledge Products</h3>
+        <p>
+            Development of specialized content including technical guides,
+            learning modules, and domain-focused publications.
+        </p>
+    </div>
+</div>
+```
+
 </section>
 
-<section>
+<section id="about">
     <h2>About Us</h2>
 
-    <p>
-        YSG Global Ventures Private Limited is established as a structured platform to build
-        knowledge-driven initiatives with clarity and discipline.
-    </p>
+```
+<p>
+    YSG Global Ventures Private Limited is established as a structured platform to build
+    knowledge-driven initiatives with clarity and discipline.
+</p>
 
-    <p>
-        The company begins its journey through publishing, with a long-term vision to expand into
-        multiple domains aligned with learning, growth, and value creation.
-    </p>
+<p>
+    The company begins its journey through publishing, with a long-term vision to expand
+    into multiple domains aligned with learning, growth, and value creation.
+</p>
+```
+
 </section>
 
 <section id="contact">
     <h2>Contact</h2>
 
-    <p>
-        For publishing inquiries, collaborations, and partnerships, please reach out to us directly.
-    </p>
+```
+<p>
+    For publishing inquiries, collaborations, and partnerships, please reach out to us directly.
+</p>
 
-    <p><b>Email:</b> ysg.globalventures@gmail.com</p>
-    <p><b>Location:</b> Karnataka, India</p>
+<p><strong>Email:</strong> ysg.globalventures@gmail.com</p>
+<p><strong>Location:</strong> Karnataka, India</p>
+```
+
 </section>
 
 <footer>
