@@ -1,376 +1,745 @@
 <!DOCTYPE html>
+<html lang="en">
 
-<html>
 <head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>YSG Global Ventures</title>
 
+    <meta name="description"
+        content="Building Authoritative Knowledge Platforms for Science, Technology, Innovation and Professional Development.">
 
-<!-- Favicon (tab icon) -->
-<link rel="icon" href="https://cdn-icons-png.flaticon.com/512/3135/3135715.png">
-
-<!-- Font -->
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-
-<style>
-
-    html {
-        scroll-behavior: smooth;
-    }
-
-    body {
-        margin: 0;
-        font-family: 'Inter', sans-serif;
-        color: #111;
-        background: #f5f7fb;
-    }
-
-    /* HEADER */
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding: 25px 60px;
-        background: #0b1f3a;
-        color: white;
-        position: sticky;
-        top: 0;
-        z-index: 1000;
-    }
-
-    .logo {
-    	height: 95px;
-    	width: auto;
-    	display: block;
-	margin-right: 20px;
-    }
-
-    nav a {
-        margin-left: 30px;
-        text-decoration: none;
-        color: #d1d9e6;
-        font-size: 14px;
-        transition: 0.3s;
-    }
-
-    nav a:hover {
-        color: white;
-    }
-
-    /* HERO */
-    .hero {
-        text-align: center;
-        padding: 180px 20px 140px;
-        background: linear-gradient(135deg, #0b1f3a, #163a63);
-        color: #ffffff;
-    }
-
-    .hero h2 {
-        font-size: 52px;
-        margin-bottom: 20px;
-        line-height: 1.2;
-    }
-
-    .hero p {
-        font-size: 18px;
-        max-width: 700px;
-        margin: 0 auto;
-        color: #d1d9e6;
-    }
-
-    .cta-button {
-        display: inline-block;
-        margin-top: 30px;
-        padding: 12px 28px;
-        background: #ffffff;
-        color: #0b1f3a;
-        text-decoration: none;
-        border-radius: 6px;
-        font-weight: bold;
-        transition: all 0.3s ease;
-    }
-
-    .cta-button:hover {
-        background: #e6e6e6;
-        transform: translateY(-2px);
-    }
-
-    /* SECTIONS */
-    section {
-        padding: 120px 20px;
-        text-align: center;
-        background: white;
-    }
-
-    section:not(.hero) {
-        max-width: 1200px;
-        margin: 30px auto;
-    }
-
-    section:nth-child(even):not(.hero) {
-        background: #f0f3f8;
-    }
-
-    h2 {
-        font-size: 36px;
-        margin-bottom: 50px;
-        font-weight: 600;
-    }
-
-    p {
-        font-size: 16px;
-        line-height: 1.7;
-        color: #444;
-    }
-
-    /* CARDS */
-    .imprint-container,
-    .publishing-container {
-        display: flex;
-        justify-content: center;
-        gap: 60px;
-        flex-wrap: wrap;
-        margin-top: 40px;
-    }
-
-    .card {
-        max-width: 320px;
-        padding: 30px 25px;
-        border-radius: 12px;
-        background: #ffffff;
-        box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-        transition: 0.3s;
-    }
-
-    .card:hover {
-        transform: translateY(-5px);
-    }
-	
-	#solutions {
-    background: #f4f7fb;
-    padding: 100px 60px;
-}
-
-#solutions .card {
-    max-width: 1100px;
-    margin: auto;
-    padding: 50px 60px;
-    border-radius: 16px;
-    background: white;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
-    text-align: left;
-    line-height: 1.9;
-}
-
-#solutions p {
-    font-size: 17px;
-    color: #444;
-    margin-bottom: 24px;
-}
-
-    .card p {
-        color: #555;
-    }
-
-    /* FOOTER */
-    footer {
-        background: #0b1f3a;
-        text-align: center;
-        padding: 40px 20px;
-    }
-
-    footer p {
-        color: #ffffff;
-        opacity: 0.9;
-        margin: 6px 0;
-    }
-
-    /* MOBILE */
-    @media (max-width: 768px) {
-        header {
-            flex-direction: column;
-            padding: 20px;
-        }
-
-        nav {
-            margin-top: 10px;
-        }
-
-        .hero h2 {
-            font-size: 32px;
-        }
-
-        .imprint-container,
-        .publishing-container {
-            flex-direction: column;
-            align-items: center;
-        }
-    }
-
-	.statcounter {
-    text-align: center;
-    margin: 20px auto;
-}
-	
-</style>
-
+    <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 
 <body>
 
-<header>
-    <img src="logo-header.png" class="logo">
+    <!-- ========================================= -->
+    <!-- HEADER                                    -->
+    <!-- ========================================= -->
+
+    <header>
+
+        <div class="container">
+
+            <h2>YSG Global Ventures</h2>
+
+            <nav>
+
+                <ul>
+
+                    <li><a href="#">Home</a></li>
+
+                    <li><a href="#">Knowledge Platforms</a></li>
+
+                    <li><a href="#">Publications</a></li>
+
+                    <li><a href="#">Contributors</a></li>
+
+                    <li><a href="#">About</a></li>
+
+                    <li><a href="#">Contact</a></li>
+
+                </ul>
+
+            </nav>
+
+        </div>
+
+    </header>
 
 
-<nav>
-    <a href="#">Home</a>
-    <a href="#about">About</a>
-    <a href="#publishing">Publishing</a>
-    <a href="#imprints">Imprints</a>
-    <a href="#contact">Contact</a>
-</nav>
 
+    <!-- ========================================= -->
+    <!-- HERO                                      -->
+    <!-- ========================================= -->
 
-</header>
+    <section class="hero">
 
-<section class="hero">
-    <h2>Building Knowledge.<br>Creating Legacy.</h2>
-    <p>
-        YSG Global Ventures is a forward-looking enterprise focused on publishing,
-        knowledge development, and long-term value creation.
-    </p>
+        <div class="container">
 
+            <h1>
+                Building Authoritative
+                Knowledge Platforms
+            </h1>
 
-<a href="#contact" class="cta-button">Start Your Publishing Journey</a>
+            <p>
 
+                Empowering professionals through science,
+                technology, innovation and lifelong learning.
+
+            </p>
+
+            <p>
+
+                YSG Global Ventures develops practical,
+                evidence-based knowledge resources that bridge
+                research, industry and education.
+
+            </p>
+
+            <a href="#" class="button">
+
+                Explore Knowledge Platforms
+
+            </a>
+
+        </div>
+
+    </section>
+    <!-- =====================================================
+     KNOWLEDGE PLATFORMS
+====================================================== -->
+
+<section class="platforms">
+
+    <div class="container">
+
+        <h2>Knowledge Platforms</h2>
+
+        <p class="section-intro">
+            Building practical, evidence-based knowledge ecosystems that connect
+            research, education and industry.
+        </p>
+
+        <div class="platform-grid">
+
+            <!-- Featured Platform -->
+
+            <div class="platform-card featured">
+
+                <span class="badge">Active</span>
+
+                <h3>PrEMReC</h3>
+
+                <p><strong>Practical Electron Microscopy Resource Centre</strong></p>
+
+                <p>
+                    A comprehensive learning platform supporting students,
+                    researchers and pharmaceutical professionals through books,
+                    articles, tutorials and practical resources.
+                </p>
+
+                <a href="em-resource-centre/index.html"
+                   class="card-button">
+                    Explore Platform →
+                </a>
+
+            </div>
+
+            <!-- Future Platform -->
+
+            <div class="platform-card">
+
+                <span class="badge coming">
+                    Coming Soon
+                </span>
+
+                <h3>Artificial Intelligence Knowledge Hub</h3>
+
+                <p>
+                    Practical AI resources for professionals,
+                    researchers and lifelong learners.
+                </p>
+
+            </div>
+
+            <!-- Future Platform -->
+
+            <div class="platform-card">
+
+                <span class="badge coming">
+                    Coming Soon
+                </span>
+
+                <h3>Innovation & Professional Learning</h3>
+
+                <p>
+                    Future platform covering innovation,
+                    commercialization,
+                    leadership and continuous professional development.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- ================================================= -->
+<!-- WHY YSG GLOBAL VENTURES                            -->
+<!-- ================================================= -->
+
+<section class="why-ysg">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <h2>Why YSG Global Ventures?</h2>
+
+            <p>
+                Bridging research, technology, commercialization and lifelong
+                professional learning through practical, evidence-based
+                knowledge platforms.
+            </p>
+
+        </div>
+
+        <div class="features-grid">
+
+            <div class="feature-card">
+
+                <div class="feature-icon">📘</div>
+
+                <h3>Evidence-Based Knowledge</h3>
+
+                <p>
+                    Every publication and learning resource is built on
+                    scientific evidence, industrial practice and real-world
+                    experience.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🔬</div>
+
+                <h3>Practical Learning</h3>
+
+                <p>
+                    Designed for students, researchers and professionals with
+                    immediate workplace applicability.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🚀</div>
+
+                <h3>Innovation & Commercialization</h3>
+
+                <p>
+                    Supporting organizations in transforming scientific ideas
+                    into practical products, services and commercial impact.
+                </p>
+
+            </div>
+
+            <div class="feature-card">
+
+                <div class="feature-icon">🌍</div>
+
+                <h3>Global Perspective</h3>
+
+                <p>
+                    Bringing together international experience across
+                    pharmaceuticals, life sciences, microscopy and emerging
+                    technologies.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section id="imprints">
-    <h2>Our Imprints</h2>
+<!-- ================================================= -->
+<!-- KNOWLEDGE RESOURCES                               -->
+<!-- ================================================= -->
 
+<section class="resources">
 
-<div class="imprint-container">
-    <div class="card">
-        <h3>Skanda Global Publishing</h3>
-        <p>
-            A premium imprint representing legacy, depth, and long-term value creation in publishing.
+    <div class="container">
+
+        <h2>Knowledge Resources</h2>
+
+        <p class="section-subtitle">
+            Practical publications and professional learning resources developed by YSG Global Ventures.
         </p>
-    </div>
 
-    <div class="card">
-        <h3>YS Global Publications</h3>
-        <p>
-            The publishing imprint of YSG Global Ventures dedicated to publishing books, journals, and educational content with clarity and global reach.
-        </p>
-    </div>
-</div>
+        <div class="resource-grid">
 
+
+            <!-- BOOK 1 -->
+
+            <div class="resource-card">
+
+                <span class="badge published">
+                    Published
+                </span>
+
+                <h3>Electron Microscopy for Beginners</h3>
+
+                <p>
+
+                    A practical introduction to electron microscopy for
+                    students, analysts and professionals.
+
+                </p>
+
+                <a href="em-resource-centre/" class="button">
+
+                    Learn More →
+
+                </a>
+
+            </div>
+
+
+
+            <!-- BOOK 2 -->
+
+            <div class="resource-card">
+
+                <span class="badge coming">
+
+                    Coming Soon
+
+                </span>
+
+                <h3>Electron Microscopy in Life Sciences</h3>
+
+                <p>
+
+                    Advanced applications of electron microscopy across
+                    biotechnology, pharmaceuticals and biomedical research.
+
+                </p>
+
+            </div>
+
+
+
+            <!-- BOOK 3 -->
+
+            <div class="resource-card">
+
+                <span class="badge published">
+
+                    Published
+
+                </span>
+
+                <h3>The Decision Overload Economy</h3>
+
+                <p>
+
+                    Understanding how Artificial Intelligence has shifted
+                    the world's biggest challenge from information overload
+                    to decision overload.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
 
 </section>
 
-<section id="publishing">
-    <h2>Publishing</h2>
+<!-- ================================================= -->
+<!-- MEET THE FOUNDER                                  -->
+<!-- ================================================= -->
+
+<section class="founder">
+
+    <div class="container founder-grid">
+
+        <div class="founder-photo">
+
+            <div class="photo-placeholder">
+
+                Your Professional Photograph
+
+            </div>
+
+        </div>
 
 
-<div class="publishing-container">
-    <div class="card">
-        <h3>Author Publishing</h3>
-        <p>
-            We help authors transform ideas into professionally published books,
-            guiding them from manuscript to global distribution.
-        </p>
+        <div class="founder-content">
+
+            <span class="section-label">
+
+                Meet the Founder
+
+            </span>
+
+            <h2>
+
+                Prashanth Gudibande
+
+            </h2>
+
+            <h3>
+
+                Author • Commercialization Strategist • Electron Microscopy Specialist
+
+            </h3>
+
+            <p>
+
+                YSG Global Ventures was founded with a simple vision —
+                to bridge science, technology, commercialization and
+                lifelong professional learning through practical,
+                evidence-based knowledge resources.
+
+            </p>
+
+            <p>
+
+                With over two decades of experience spanning
+                pharmaceuticals, electron microscopy,
+                scientific commercialization, sales leadership,
+                AI applications and publishing,
+                Prashanth continues to build knowledge platforms
+                that empower professionals worldwide.
+
+            </p>
+
+            <a href="#" class="button">
+
+                Read My Story →
+
+            </a>
+
+        </div>
+
     </div>
-
-    <div class="card">
-        <h3>Corporate Publishing</h3>
-        <p>
-            Structured publishing solutions for organizations to present knowledge,
-            training materials, and brand narratives.
-        </p>
-    </div>
-
-    <div class="card">
-        <h3>Knowledge Products</h3>
-        <p>
-            Development of specialized content including technical guides,
-            learning modules, and domain-focused publications.
-        </p>
-    </div>
-</div>
-
 
 </section>
-<section id="solutions">
-    <h2>Scientific & Knowledge Solutions</h2>
 
-    <div class="card">
-        <p>
-            YSG Global Ventures is progressively building a knowledge and solutions-driven platform focused on Pharma R&D, advanced scientific applications, and technology-oriented domains.
-        </p>
+<!-- =====================================================
+     IMPACT SECTION
+====================================================== -->
 
-        <p>
-            In collaboration with experienced professionals from the field of Electron Microscopy and scientific research, the organization aims to support specialized areas including GLP practices, 21 CFR Part 11 compliance awareness, Intellectual Property (IP) awareness, Electron Microscopy solutions, Nanotechnology applications, and related analytical and research-focused domains.
-        </p>
+<section class="impact">
 
-        <p>
-            The long-term vision is to contribute toward knowledge development, scientific excellence, and industry-oriented solution frameworks for research and innovation environments.
-        </p>
+    <div class="container">
+
+        <div class="section-title">
+            <h2>Growing Through Knowledge</h2>
+
+            <p>
+                Every publication, platform and initiative contributes
+                toward a long-term mission of building practical,
+                evidence-based knowledge ecosystems.
+            </p>
+        </div>
+
+        <div class="impact-grid">
+
+            <div class="impact-card">
+                <h3>8+</h3>
+                <p>Books Published & In Development</p>
+            </div>
+
+            <div class="impact-card">
+                <h3>3</h3>
+                <p>Knowledge Platforms</p>
+            </div>
+
+            <div class="impact-card">
+                <h3>25+</h3>
+                <p>Years of Professional Experience</p>
+            </div>
+
+            <div class="impact-card">
+                <h3>6</h3>
+                <p>Professional Domains</p>
+            </div>
+
+        </div>
+
     </div>
-</section>	
-<section id="about">
-    <h2>About Us</h2>
-
-
-<p>
-    YSG Global Ventures is established as a structured platform to build
-    knowledge-driven initiatives with clarity and discipline.
-</p>
-
-<p>
-    The company begins its journey through publishing, with a long-term vision to expand
-    into multiple domains aligned with learning, growth, and value creation.
-</p>
-
 
 </section>
 
-<section id="contact">
-    <h2>Contact</h2>
+<!-- =====================================================
+     FEATURED INSIGHTS
+====================================================== -->
 
+<section class="insights">
 
-<p>
-    For publishing inquiries, collaborations, and partnerships, please reach out to us directly.
-</p>
+    <div class="container">
 
-<p><strong>Email:</strong> ysgglobalventures@gmail.com</p>
-<p><strong>Location:</strong> Bengaluru, Karnataka, India</p>
+        <div class="section-title">
 
+            <h2>Featured Insights</h2>
+
+            <p>
+                Thought leadership on science, technology,
+                artificial intelligence, commercialization and
+                lifelong professional learning.
+            </p>
+
+        </div>
+
+        <div class="insight-grid">
+
+            <!-- Card 1 -->
+
+            <article class="insight-card">
+
+                <div class="insight-image ai"></div>
+
+                <div class="insight-content">
+
+                    <span class="category ai-category">
+                        AI • Strategy
+                    </span>
+
+                    <h3>The Decision Overload Economy</h3>
+
+                    <p>
+
+                        Why Artificial Intelligence has shifted
+                        the world's biggest challenge from finding
+                        information to making better decisions.
+
+                    </p>
+
+                    <a href="#" class="button">
+                        Explore Insight →
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- Card 2 -->
+
+            <article class="insight-card">
+
+                <div class="insight-image science"></div>
+
+                <div class="insight-content">
+
+                    <span class="category science-category">
+                        Science
+                    </span>
+
+                    <h3>Practical Electron Microscopy</h3>
+
+                    <p>
+
+                        Practical learning resources supporting
+                        students, researchers and pharmaceutical
+                        professionals worldwide.
+
+                    </p>
+
+                    <a href="#" class="button">
+
+                        Explore Series →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+            <!-- Card 3 -->
+
+            <article class="insight-card">
+
+                <div class="insight-image innovation"></div>
+
+                <div class="insight-content">
+
+                    <span class="category innovation-category">
+
+                        Innovation
+
+                    </span>
+
+                    <h3>Innovation & Commercialization</h3>
+
+                    <p>
+
+                        Bridging scientific innovation,
+                        technology and commercialization through
+                        practical business strategy.
+
+                    </p>
+
+                    <a href="#" class="button">
+
+                        Learn More →
+
+                    </a>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
 
 </section>
+
+<!-- =====================================================
+     CALL TO ACTION
+====================================================== -->
+
+<section class="cta">
+
+    <div class="container">
+
+        <h2>
+            Ready to Explore Practical Knowledge?
+        </h2>
+
+        <p>
+
+            Discover evidence-based publications, professional
+            learning platforms and practical resources designed
+            for students, researchers, professionals and
+            organizations.
+
+        </p>
+
+        <div class="cta-buttons">
+
+            <a href="#" class="button">
+
+                Explore Knowledge Platforms →
+
+            </a>
+
+            <a href="#" class="button secondary-button">
+
+                Contact YSG Global Ventures
+
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- =====================================================
+     FOOTER
+====================================================== -->
 
 <footer>
-    <p>YSG Global Ventures</p>
-    <p>Bengaluru, India</p>
-	<p style="color:#d4af37; font-size:16px; font-weight:600; margin-top:20px;">
-</p>
-	<!-- Default Statcounter code for Business and Education Website
-https://ysgglobalventures.com -->
-<script type="text/javascript">
-var sc_project=13338681; 
-var sc_invisible=1; 
-var sc_security="00cabbc1"; 
-var scJsHost = "https://";
-document.write("<sc"+"ript type='text/javascript' src='" + scJsHost+
-"statcounter.com/counter/counter.js'></"+"script>");
-</script>
-<noscript><div class="statcounter"><a title="Web Analytics Made Easy -
-Statcounter" href="https://statcounter.com/" target="_blank"><img
-class="statcounter" src="https://c.statcounter.com/13338681/0/00cabbc1/0/"
-alt="Web Analytics Made Easy - Statcounter"
-referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
-<!-- End of Statcounter Code -->
-    <p>© 2026 YSG Global Ventures. All Rights Reserved.</p>
+
+    <div class="container footer-grid">
+
+        <div>
+
+            <h3>YSG Global Ventures</h3>
+
+            <p>
+
+                Building authoritative knowledge platforms
+                connecting science, technology, innovation,
+                commercialization and lifelong professional learning.
+
+            </p>
+
+        </div>
+
+        <div>
+
+            <h4>Knowledge Platforms</h4>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        Practical Electron Microscopy Resource Centre
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Artificial Intelligence Knowledge Hub
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Innovation & Commercialization
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Publications</h4>
+
+            <ul>
+
+                <li><a href="#">Books</a></li>
+
+                <li><a href="#">Articles</a></li>
+
+                <li><a href="#">Learning Resources</a></li>
+
+                <li><a href="#">Updates</a></li>
+
+            </ul>
+
+        </div>
+
+        <div>
+
+            <h4>Connect</h4>
+
+            <ul>
+
+                <li>
+                    <a href="#">
+                        LinkedIn
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        Contact
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#">
+                        ysgglobalventures.com
+                    </a>
+                </li>
+
+            </ul>
+
+        </div>
+
+    </div>
+
+    <div class="footer-bottom">
+
+    <p>
+        Evidence • Innovation • Learning • Impact
+    </p>
+
+    <p>
+        © 2026 YSG Global Ventures.
+        All Rights Reserved.
+    </p>
+
+</div>
+
 </footer>
 
 </body>
