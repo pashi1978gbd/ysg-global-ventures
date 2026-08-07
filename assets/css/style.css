@@ -397,7 +397,7 @@ nav a:hover {
 
     display:grid;
 
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
 
     gap:30px;
 
@@ -437,9 +437,15 @@ nav a:hover {
 
     margin-bottom:20px;
 
-    font-size:28px;
+    font-size:26px;
+
+    line-height:1.25;
 
     color:var(--primary-color);
+
+    word-break: normal;
+
+    overflow-wrap: anywhere;
 
 }
 
