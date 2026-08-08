@@ -1120,3 +1120,468 @@ footer a:hover{
         gap: 24px;
     }
 }
+/* =========================================================
+   YSG GLOBAL VENTURES — HERO ECOSYSTEM
+   Refined ecosystem presentation
+   ========================================================= */
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:55px;
+    min-height:620px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero-content h1{
+    margin-bottom:28px;
+}
+
+.hero-content .hero-lead{
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:28px;
+}
+
+.hero-content p{
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   ECOSYSTEM
+   ========================================================= */
+
+.hero-ecosystem{
+    position:relative;
+
+    width:100%;
+    max-width:650px;
+    height:570px;
+
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   CENTRAL YSG HUB
+   ========================================================= */
+
+.ecosystem-center{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:220px;
+    height:220px;
+
+    border:2px solid #c99a32;
+    border-radius:50%;
+
+    background:#ffffff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    z-index:5;
+
+    box-shadow:
+        0 16px 40px rgba(0,0,0,.12),
+        0 0 0 12px rgba(201,154,50,.07);
+}
+
+.ecosystem-logo{
+    font-size:54px;
+    font-weight:700;
+    letter-spacing:4px;
+
+    color:var(--primary-color);
+
+    line-height:1;
+}
+
+.ecosystem-name{
+    margin-top:8px;
+
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:2.5px;
+
+    color:var(--primary-color);
+}
+
+.ecosystem-tagline{
+    margin-top:11px;
+    padding-top:9px;
+
+    border-top:1px solid #c99a32;
+
+    font-size:9px;
+    font-weight:600;
+    letter-spacing:1.4px;
+
+    color:var(--primary-color);
+
+    white-space:nowrap;
+}
+
+/* =========================================================
+   ECOSYSTEM RING
+   ========================================================= */
+
+.hero-ecosystem::before{
+    content:"";
+
+    position:absolute;
+
+    width:390px;
+    height:390px;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border:1px solid rgba(201,154,50,.38);
+
+    border-radius:50%;
+
+    z-index:0;
+}
+
+.hero-ecosystem::after{
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border:1px dashed rgba(201,154,50,.18);
+
+    border-radius:50%;
+
+    z-index:0;
+}
+
+
+/* =========================================================
+   ECOSYSTEM NODES
+   ========================================================= */
+
+.ecosystem-node{
+    position:absolute;
+
+    width:165px;
+    min-height:125px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    z-index:4;
+}
+
+.ecosystem-node strong{
+    display:block;
+
+    margin-top:10px;
+
+    font-size:16px;
+    line-height:1.25;
+
+    color:var(--primary-color);
+}
+
+.ecosystem-node small{
+    display:block;
+
+    margin-top:6px;
+
+    max-width:165px;
+
+    font-size:11px;
+    line-height:1.4;
+
+    color:#666;
+}
+
+
+/* =========================================================
+   NODE ICONS
+   ========================================================= */
+
+.node-icon{
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:var(--primary-color);
+
+    border:3px solid #c99a32;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#ffffff;
+
+    font-size:29px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.13);
+}
+
+
+/* =========================================================
+   TEM COLUMN — RESEARCH
+   ========================================================= */
+
+.tem-icon{
+    position:relative;
+}
+
+.tem-icon::before{
+    content:"";
+
+    position:absolute;
+
+    width:16px;
+    height:40px;
+
+    top:13px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border:2px solid #ffffff;
+
+    border-radius:3px;
+}
+
+.tem-icon::after{
+    content:"";
+
+    position:absolute;
+
+    width:34px;
+    height:5px;
+
+    bottom:13px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#ffffff;
+
+    border-radius:3px;
+
+    box-shadow:
+        0 -16px 0 -1px #ffffff,
+        0 -27px 0 -1px #ffffff;
+}
+
+
+/* =========================================================
+   NODE POSITIONS
+   ========================================================= */
+
+.node-research{
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.node-innovation{
+    top:24%;
+    right:-2%;
+}
+
+.node-commercialization{
+    bottom:0;
+    right:9%;
+}
+
+.node-education{
+    bottom:0;
+    left:9%;
+}
+
+.node-industry{
+    top:24%;
+    left:-2%;
+}
+
+
+/* =========================================================
+   SUBTLE ECOSYSTEM CONNECTORS
+   ========================================================= */
+
+.ecosystem-node::before{
+    content:"";
+
+    position:absolute;
+
+    z-index:-1;
+
+    width:70px;
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        rgba(201,154,50,0),
+        rgba(201,154,50,.65),
+        rgba(201,154,50,0)
+    );
+}
+
+
+/* Research → Innovation */
+.node-research::before{
+    width:190px;
+    transform:rotate(28deg);
+    top:88px;
+    left:115px;
+}
+
+/* Innovation → Commercialization */
+.node-innovation::before{
+    width:145px;
+    transform:rotate(72deg);
+    top:115px;
+    left:15px;
+}
+
+/* Commercialization → Education */
+.node-commercialization::before{
+    width:190px;
+    transform:rotate(0deg);
+    top:35px;
+    left:-115px;
+}
+
+/* Education → Industry */
+.node-education::before{
+    width:145px;
+    transform:rotate(-72deg);
+    top:115px;
+    left:15px;
+}
+
+/* Industry → Research */
+.node-industry::before{
+    width:190px;
+    transform:rotate(-28deg);
+    top:88px;
+    left:115px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width:1100px){
+
+    .hero-grid{
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+    .hero-ecosystem{
+        transform:scale(.9);
+        transform-origin:center;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width:800px){
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero-ecosystem{
+        height:520px;
+        max-width:650px;
+        transform:none;
+    }
+}
+
+
+@media (max-width:600px){
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-content .hero-lead{
+        font-size:19px;
+    }
+
+    .hero-ecosystem{
+        height:470px;
+
+        transform:scale(.78);
+        transform-origin:top center;
+
+        margin-bottom:-80px;
+    }
+}
+/* =====================================================
+   HERO ECOSYSTEM — CENTER TAGLINE REFINEMENT
+   ===================================================== */
+
+.ecosystem-center .ecosystem-tagline {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.2;
+
+    color: var(--primary-color);
+}
