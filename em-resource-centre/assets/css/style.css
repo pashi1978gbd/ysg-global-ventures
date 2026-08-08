@@ -1779,3 +1779,658 @@ body {
 .practice-card:nth-child(5) {
     min-height: 400px;
 }
+/* =========================================
+   PrEMReC HEADER / NAVIGATION
+   ========================================= */
+
+.premrec-header {
+    position: relative;
+    z-index: 1000;
+
+    background: #ffffff;
+
+    border-bottom: 1px solid #e5e9ed;
+
+    box-shadow:
+        0 4px 16px rgba(15, 47, 79, 0.04);
+}
+
+
+.premrec-nav {
+    min-height: 82px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 30px;
+}
+
+
+/* =========================================
+   PrEMReC BRAND
+   ========================================= */
+
+.premrec-brand {
+    display: flex;
+    flex-direction: column;
+
+    flex-shrink: 0;
+
+    text-decoration: none;
+}
+
+
+.premrec-brand-main {
+    color: #0f2f4f;
+
+    font-size: 24px;
+    line-height: 1.1;
+
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+}
+
+
+.premrec-brand-sub {
+    margin-top: 5px;
+
+    color: #6a7d8f;
+
+    font-size: 9px;
+    line-height: 1.2;
+
+    font-weight: 600;
+
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+
+.premrec-navigation {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 26px;
+}
+
+
+.premrec-navigation a {
+    position: relative;
+
+    padding: 8px 0;
+
+    color: #314e68;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.premrec-navigation a::after {
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+    bottom: 2px;
+
+    width: 0;
+    height: 2px;
+
+    background: #d5a027;
+
+    transition:
+        width 0.25s ease;
+}
+
+
+.premrec-navigation a:hover {
+    color: #0f2f4f;
+}
+
+
+.premrec-navigation a:hover::after {
+    width: 100%;
+}
+
+
+/* =========================================
+   YSG RETURN BUTTON
+   ========================================= */
+
+.premrec-nav-button {
+    flex-shrink: 0;
+
+    padding: 11px 18px;
+
+    border: 1px solid #d5a027;
+    border-radius: 4px;
+
+    background: #0f2f4f;
+
+    color: #ffffff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.premrec-nav-button:hover {
+    background: #173e60;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================
+   HEADER RESPONSIVE
+   ========================================= */
+
+@media (max-width: 1050px) {
+
+    .premrec-navigation {
+        gap: 18px;
+    }
+
+    .premrec-navigation a {
+        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 850px) {
+
+    .premrec-navigation {
+        display: none;
+    }
+
+    .premrec-nav {
+        min-height: 74px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .premrec-brand-main {
+        font-size: 21px;
+    }
+
+    .premrec-brand-sub {
+        font-size: 8px;
+    }
+
+    .premrec-nav-button {
+        padding: 9px 13px;
+
+        font-size: 11px;
+    }
+
+}
+/* =========================================
+   PrEMReC FOOTER
+   ========================================= */
+
+.premrec-footer {
+    margin-top: 0;
+
+    background: #0f2f4f;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   FOOTER GRID
+   ========================================= */
+
+.premrec-footer-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        1.6fr
+        1fr
+        1fr
+        1fr;
+
+    gap: 55px;
+
+    padding-top: 65px;
+    padding-bottom: 55px;
+}
+
+
+/* =========================================
+   FOOTER BRAND
+   ========================================= */
+
+.premrec-footer-brand {
+    max-width: 360px;
+}
+
+
+.premrec-footer-title {
+
+    color: #ffffff;
+
+    font-size: 30px;
+    line-height: 1;
+
+    font-weight: 800;
+
+    letter-spacing: 0.02em;
+}
+
+
+.premrec-footer-subtitle {
+
+    margin-top: 8px;
+
+    color: #d5a027;
+
+    font-size: 10px;
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+}
+
+
+.premrec-footer-brand p {
+
+    margin-top: 22px;
+
+    color: #c8d4df;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   RETURN TO YSG
+   ========================================= */
+
+.premrec-footer-home {
+
+    display: inline-block;
+
+    margin-top: 18px;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease;
+}
+
+
+.premrec-footer-home:hover {
+
+    color: #d5a027;
+}
+
+
+/* =========================================
+   FOOTER COLUMNS
+   ========================================= */
+
+.premrec-footer-column {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+}
+
+
+.premrec-footer-column h3 {
+
+    margin: 0 0 18px;
+
+    color: #d5a027;
+
+    font-size: 12px;
+    line-height: 1.4;
+
+    font-weight: 700;
+
+    letter-spacing: 0.10em;
+
+    text-transform: uppercase;
+}
+
+
+.premrec-footer-column a {
+
+    margin-bottom: 11px;
+
+    color: #d7e0e8;
+
+    font-size: 13px;
+    line-height: 1.5;
+
+    text-decoration: none;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.premrec-footer-column a:hover {
+
+    color: #ffffff;
+
+    transform: translateX(3px);
+}
+
+
+/* =========================================
+   FOOTER BOTTOM
+   ========================================= */
+
+.premrec-footer-bottom {
+
+    border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+.premrec-footer-bottom .premrec-container {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+
+.premrec-footer-bottom p {
+
+    margin: 0;
+
+    color: #9fb1c1;
+
+    font-size: 11px;
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   FOOTER RESPONSIVE
+   ========================================= */
+
+@media (max-width: 900px) {
+
+    .premrec-footer-grid {
+
+        grid-template-columns:
+            1.5fr
+            1fr
+            1fr;
+
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .premrec-footer-grid {
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding-top: 50px;
+        padding-bottom: 40px;
+
+    }
+
+
+    .premrec-footer-brand {
+
+        max-width: 100%;
+
+    }
+
+
+    .premrec-footer-bottom .premrec-container {
+
+        flex-direction: column;
+
+        align-items: flex-start;
+
+    }
+
+}
+/* =========================================
+   PrEMReC FINAL CTA
+   ========================================= */
+
+.premrec-final-cta {
+
+    padding: 90px 20px;
+
+    text-align: center;
+
+    background: #f5f7f9;
+
+    border-top: 1px solid #e4e9ee;
+}
+
+
+.premrec-final-cta .premrec-container {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+}
+
+
+/* =========================================
+   CTA EYEBROW
+   ========================================= */
+
+.premrec-final-eyebrow {
+
+    display: block;
+
+    margin-bottom: 18px;
+
+    color: #d5a027;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    letter-spacing: 0.16em;
+
+    text-transform: uppercase;
+}
+
+
+/* =========================================
+   CTA HEADING
+   ========================================= */
+
+.premrec-final-cta h2 {
+
+    margin: 0;
+
+    color: #0f2f4f;
+
+    font-size: clamp(32px, 4vw, 48px);
+
+    line-height: 1.15;
+
+    font-weight: 800;
+}
+
+
+/* =========================================
+   CTA DESCRIPTION
+   ========================================= */
+
+.premrec-final-cta p {
+
+    max-width: 700px;
+
+    margin: 24px auto 0;
+
+    color: #49657e;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   CTA ACTIONS
+   ========================================= */
+
+.premrec-final-actions {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 14px;
+
+    margin-top: 35px;
+}
+
+
+/* Primary CTA */
+
+.premrec-final-actions .premrec-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-width: 190px;
+
+    padding: 14px 22px;
+
+    border-radius: 5px;
+
+    background: #0f2f4f;
+
+    color: #ffffff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: none;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.premrec-final-actions .premrec-button:hover {
+
+    background: #173e60;
+
+    transform: translateY(-2px);
+}
+
+
+/* Secondary CTA */
+
+.premrec-final-actions .premrec-button.secondary {
+
+    background: transparent;
+
+    color: #0f2f4f;
+
+    border: 1px solid #0f2f4f;
+}
+
+
+.premrec-final-actions .premrec-button.secondary:hover {
+
+    background: #0f2f4f;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CTA RESPONSIVE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .premrec-final-cta {
+
+        padding: 70px 20px;
+
+    }
+
+
+    .premrec-final-cta p {
+
+        font-size: 15px;
+
+    }
+
+
+    .premrec-final-actions {
+
+        flex-direction: column;
+
+        width: 100%;
+
+    }
+
+
+    .premrec-final-actions .premrec-button {
+
+        width: 100%;
+
+        max-width: 300px;
+
+    }
+
+}
