@@ -1,0 +1,1587 @@
+/* ==========================================================
+   YSG Global Ventures
+   Global Stylesheet
+   Version: 1.0.0
+   ========================================================== */
+
+
+/* ---------- Root Variables ---------- */
+
+:root {
+
+    --primary-color: #0d2b45;
+    --secondary-color: #c89b3c;
+
+    --background-color: #ffffff;
+    --light-background: #f5f7fa;
+
+    --text-color: #333333;
+    --heading-color: #0d2b45;
+
+    --border-radius: 8px;
+
+    --shadow:
+        0 4px 12px rgba(0,0,0,0.08);
+
+}
+
+
+/* ---------- Reset ---------- */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+
+/* ---------- Body ---------- */
+
+body{
+
+    font-family:
+        "Segoe UI",
+        Arial,
+        sans-serif;
+
+    font-size:16px;
+
+    line-height:1.7;
+
+    color:var(--text-color);
+
+    background:var(--background-color);
+
+}
+
+
+/* ---------- Container ---------- */
+
+.container{
+
+    width:90%;
+
+    max-width:1200px;
+
+    margin:auto;
+
+}
+
+
+/* ---------- Headings ---------- */
+
+h1,h2,h3,h4{
+
+    color:var(--heading-color);
+
+    margin-bottom:20px;
+
+}
+
+
+/* ---------- Links ---------- */
+
+a{
+
+    color:var(--primary-color);
+
+    text-decoration:none;
+
+}
+
+a:hover{
+
+    color:var(--secondary-color);
+
+}
+
+
+/* ---------- Buttons ---------- */
+
+.button{
+
+    display:inline-block;
+
+    padding:12px 28px;
+
+    background:var(--primary-color);
+
+    color:white;
+
+    border-radius:var(--border-radius);
+
+    transition:.3s;
+
+}
+
+.button:hover{
+
+    background:var(--secondary-color);
+
+}
+
+
+/* ---------- Cards ---------- */
+
+.card{
+
+    background:white;
+
+    border-radius:var(--border-radius);
+
+    box-shadow:var(--shadow);
+
+    padding:30px;
+
+}
+
+
+/* ==========================================================
+   End of File
+   ========================================================== */
+   /* ==========================================================
+   Header
+========================================================== */
+
+header {
+
+    background: #ffffff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+
+}
+
+header .container {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+}
+
+header h2 {
+
+    margin: 0;
+
+    color: var(--primary-color);
+
+}
+
+
+/* Navigation */
+
+nav ul {
+
+    list-style: none;
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+nav a {
+
+    font-weight: 600;
+
+    transition: .3s;
+
+}
+
+nav a:hover {
+
+    color: var(--secondary-color);
+
+}
+
+
+/* ==========================================================
+   Hero
+========================================================== */
+
+.hero {
+
+    padding: 100px 0;
+
+    background: var(--light-background);
+
+}
+
+.hero h1 {
+
+    font-size: 54px;
+
+    max-width: 800px;
+
+    line-height: 1.2;
+
+}
+
+.hero p {
+
+    max-width: 750px;
+
+    margin-bottom: 20px;
+
+    font-size: 20px;
+
+}
+/* =====================================================
+   KNOWLEDGE PLATFORMS
+===================================================== */
+
+.platforms{
+
+    padding:80px 0;
+
+    background:#ffffff;
+
+}
+
+.platforms h2{
+
+    text-align:center;
+
+}
+
+.section-intro{
+
+    max-width:700px;
+
+    margin:20px auto 60px;
+
+    text-align:center;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.platform-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+
+    gap:35px;
+
+}
+
+.platform-card{
+
+    background:white;
+
+    border-radius:14px;
+
+    padding:35px;
+
+    box-shadow:var(--shadow);
+
+    transition:0.35s ease;
+
+    border-top:5px solid var(--primary-color);
+
+}
+
+.platform-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.platform-card h3{
+
+    margin:20px 0;
+
+}
+
+.platform-card p{
+
+    margin-bottom:25px;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    background:var(--primary-color);
+
+    color:white;
+
+    border-radius:30px;
+
+    font-size:13px;
+
+    font-weight:600;
+
+}
+
+.coming{
+
+    background:#999;
+
+}
+
+.card-button{
+
+    display:inline-block;
+
+    padding:12px 26px;
+
+    background:var(--secondary-color);
+
+    color:white;
+
+    text-decoration:none;
+
+    border-radius:8px;
+
+    transition:0.3s;
+
+    font-weight:600;
+
+}
+
+.card-button:hover{
+
+    background:var(--primary-color);
+
+}
+/* =====================================================
+   WHY YSG GLOBAL VENTURES
+===================================================== */
+
+.why-ysg{
+
+    padding:100px 0;
+
+    background:#ffffff;
+
+}
+
+.section-heading{
+
+    text-align:center;
+
+    max-width:900px;
+
+    margin:0 auto 60px;
+
+}
+
+.section-heading h2{
+
+    font-size:42px;
+
+    margin-bottom:20px;
+
+}
+
+.section-heading p{
+
+    font-size:20px;
+
+    color:#666;
+
+    line-height:1.8;
+
+}
+
+.features-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:30px;
+
+}
+
+.feature-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:16px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.feature-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+
+}
+
+.feature-icon{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+    text-align:center;
+
+}
+
+.feature-card h3{
+
+    margin-bottom:20px;
+
+    font-size:22px;
+
+    line-height:1.25;
+
+    color:var(--primary-color);
+
+    word-break: normal;
+
+    overflow-wrap: anywhere;
+
+}
+
+.feature-card p{
+
+    line-height:1.8;
+
+    color:#555;
+
+}
+/* ==========================================================
+   KNOWLEDGE RESOURCES
+========================================================== */
+
+.resources{
+
+    padding:100px 0;
+
+    background:white;
+
+}
+
+.section-subtitle{
+
+    text-align:center;
+
+    max-width:800px;
+
+    margin:20px auto 70px;
+
+}
+
+.resource-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(3,1fr);
+
+    gap:35px;
+
+}
+
+.resource-card{
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:var(--border-radius);
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.resource-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.resource-card h3{
+
+    margin:20px 0;
+
+}
+
+.badge{
+
+    display:inline-block;
+
+    padding:8px 18px;
+
+    border-radius:30px;
+
+    font-size:14px;
+
+    color:white;
+
+    font-weight:bold;
+
+}
+
+.published{
+
+    background:#2e7d32;
+
+}
+
+.coming{
+
+    background:#9e9e9e;
+
+}
+/* ==========================================================
+   FOUNDER SECTION
+========================================================== */
+
+.founder{
+
+    padding:120px 0;
+
+    background:var(--light-background);
+
+}
+
+.founder-grid{
+
+    display:grid;
+
+    grid-template-columns:320px 1fr;
+
+    gap:70px;
+
+    align-items:center;
+
+}
+
+.founder-photo{
+
+    display:flex;
+
+    justify-content:center;
+
+}
+
+.photo-placeholder{
+
+    width:320px;
+
+    height:420px;
+
+    border-radius:20px;
+
+    background:#d9d9d9;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    color:#666;
+
+    font-weight:bold;
+
+    box-shadow:var(--shadow);
+
+}
+
+.section-label{
+
+    color:var(--secondary-color);
+
+    font-weight:bold;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+}
+
+.founder h2{
+
+    margin:15px 0;
+
+}
+
+.founder h3{
+
+    margin-bottom:25px;
+
+    color:#555;
+
+    font-weight:600;
+
+}
+
+.founder p{
+
+    margin-bottom:20px;
+
+}
+/*======================================================
+  IMPACT SECTION
+======================================================*/
+
+.impact{
+
+    padding:100px 0;
+
+    background:#ffffff;
+
+}
+
+.impact-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:30px;
+
+    margin-top:60px;
+
+}
+
+.impact-card{
+
+    background:white;
+
+    text-align:center;
+
+    padding:50px 30px;
+
+    border-radius:var(--border-radius);
+
+    box-shadow:var(--shadow);
+
+    transition:.3s;
+
+}
+
+.impact-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.impact-card h3{
+
+    font-size:52px;
+
+    color:var(--primary-color);
+
+    margin-bottom:15px;
+
+}
+
+.impact-card p{
+
+    font-size:18px;
+
+    color:#666;
+
+}
+/*======================================================
+ FEATURED INSIGHTS
+======================================================*/
+
+.insights{
+
+    padding:100px 0;
+
+    background:var(--light-background);
+
+}
+
+.insight-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+
+    gap:40px;
+
+    margin-top:60px;
+
+}
+
+.insight-card{
+
+    background:white;
+
+    border-radius:var(--border-radius);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow);
+
+    transition:.35s;
+
+}
+
+.insight-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.insight-image{
+
+    height:220px;
+
+}
+
+.ai{
+
+    background:linear-gradient(135deg,#0d2b45,#3d6cb9);
+
+}
+
+.science{
+
+    background:linear-gradient(135deg,#245c3c,#58a96d);
+
+}
+
+.innovation{
+
+    background:linear-gradient(135deg,#8b5a00,#d4a336);
+
+}
+
+.insight-content{
+
+    padding:35px;
+
+}
+
+.category{
+
+    display:inline-block;
+
+    padding:8px 16px;
+
+    border-radius:25px;
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:bold;
+
+    margin-bottom:20px;
+
+}
+
+.ai-category{
+
+    background:#0d2b45;
+
+}
+
+.science-category{
+
+    background:#2e7d32;
+
+}
+
+.innovation-category{
+
+    background:#c89b3c;
+
+}
+
+.insight-card h3{
+
+    margin-bottom:20px;
+
+}
+
+.insight-card p{
+
+    margin-bottom:30px;
+
+}
+/*======================================================
+ CALL TO ACTION
+======================================================*/
+
+.cta{
+
+    padding:120px 0;
+
+    background:linear-gradient(
+        135deg,
+        #0d2b45,
+        #204a70
+    );
+
+    text-align:center;
+
+    color:white;
+
+}
+
+.cta h2{
+
+    color:white;
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+.cta p{
+
+    color:#e4eaf0;
+
+    max-width:800px;
+
+    margin:auto;
+
+    margin-bottom:45px;
+
+    font-size:20px;
+
+}
+
+.cta-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.secondary-button{
+
+    background:white;
+
+    color:var(--primary-color);
+
+}
+
+.secondary-button:hover{
+
+    background:#f5f5f5;
+
+}
+/*======================================================
+ FOOTER
+======================================================*/
+
+footer{
+
+    background:#081c2e;
+
+    color:white;
+
+    padding-top:80px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(240px,1fr));
+
+    gap:50px;
+
+}
+
+footer h3{
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+footer h4{
+
+    color:white;
+
+    margin-bottom:20px;
+
+}
+
+footer p{
+
+    color:#cfd8e3;
+
+    line-height:1.8;
+
+}
+
+footer ul{
+
+    list-style:none;
+
+}
+
+footer li{
+
+    margin-bottom:12px;
+
+}
+
+footer a{
+
+    color:#cfd8e3;
+
+    text-decoration:none;
+
+    transition:.3s;
+
+}
+
+footer a:hover{
+
+    color:white;
+
+}
+
+.footer-bottom{
+
+    margin-top:60px;
+
+    padding:25px;
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    color:#b8c5d3;
+
+    font-size:14px;
+
+}
+/* =====================================================
+   GOLD DIVIDER
+===================================================== */
+
+.footer-divider{
+
+    height:4px;
+
+    background:linear-gradient(
+        90deg,
+        #c89b3c,
+        #f4d06f,
+        #c89b3c
+    );
+
+}
+/* =====================================================
+   FOOTER BOTTOM
+===================================================== */
+
+.footer-bottom{
+
+    text-align:center;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+    padding-top:35px;
+
+    margin-top:60px;
+
+}
+
+.footer-bottom p:first-child{
+
+    color:#c89b3c;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    margin-bottom:15px;
+
+    text-transform:uppercase;
+
+    font-size:14px;
+
+}
+
+.footer-bottom p:last-child{
+
+    color:#bfc7d5;
+
+    font-size:15px;
+
+}
+footer a{
+
+    transition:.30s;
+
+}
+
+footer a:hover{
+
+    color:#c89b3c;
+
+    padding-left:6px;
+
+}
+/* =====================================================
+   FOUNDER NAME HIGHLIGHT
+===================================================== */
+
+.founder-content h2{
+
+    color:#0d2b45;
+
+    position:relative;
+
+    display:inline-block;
+
+}
+
+.founder-content h2::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-10px;
+
+    width:70px;
+
+    height:4px;
+
+    background:#c89b3c;
+
+    border-radius:10px;
+
+}/* =====================================================
+   PREMIUM BUTTON EFFECTS
+===================================================== */
+
+.button{
+
+    transition:all .35s ease;
+
+}
+
+.button:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 12px 30px rgba(0,0,0,.20);
+
+}
+/* =========================================
+   Responsive Features Grid Refinement
+   ========================================= */
+
+@media (min-width: 1100px) {
+    .features-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (min-width: 700px) and (max-width: 1099px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+}
+
+@media (max-width: 699px) {
+    .features-grid {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+/* =========================================================
+   YSG GLOBAL VENTURES — HERO ECOSYSTEM
+   Refined ecosystem presentation
+   ========================================================= */
+
+.hero-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    align-items:center;
+    gap:55px;
+    min-height:620px;
+}
+
+
+/* =========================================================
+   HERO CONTENT
+   ========================================================= */
+
+.hero-content{
+    max-width:650px;
+}
+
+.hero-content h1{
+    margin-bottom:28px;
+}
+
+.hero-content .hero-lead{
+    font-size:22px;
+    line-height:1.7;
+    margin-bottom:28px;
+}
+
+.hero-content p{
+    line-height:1.8;
+}
+
+
+/* =========================================================
+   ECOSYSTEM
+   ========================================================= */
+
+.hero-ecosystem{
+    position:relative;
+
+    width:100%;
+    max-width:650px;
+    height:570px;
+
+    margin:0 auto;
+}
+
+
+/* =========================================================
+   CENTRAL YSG HUB
+   ========================================================= */
+
+.ecosystem-center{
+    position:absolute;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    width:220px;
+    height:220px;
+
+    border:2px solid #c99a32;
+    border-radius:50%;
+
+    background:#ffffff;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    z-index:5;
+
+    box-shadow:
+        0 16px 40px rgba(0,0,0,.12),
+        0 0 0 12px rgba(201,154,50,.07);
+}
+
+.ecosystem-logo{
+    font-size:54px;
+    font-weight:700;
+    letter-spacing:4px;
+
+    color:var(--primary-color);
+
+    line-height:1;
+}
+
+.ecosystem-name{
+    margin-top:8px;
+
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:2.5px;
+
+    color:var(--primary-color);
+}
+
+.ecosystem-tagline{
+    margin-top:11px;
+    padding-top:9px;
+
+    border-top:1px solid #c99a32;
+
+    font-size:9px;
+    font-weight:600;
+    letter-spacing:1.4px;
+
+    color:var(--primary-color);
+
+    white-space:nowrap;
+}
+
+/* =========================================================
+   ECOSYSTEM RING
+   ========================================================= */
+
+.hero-ecosystem::before{
+    content:"";
+
+    position:absolute;
+
+    width:390px;
+    height:390px;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border:1px solid rgba(201,154,50,.38);
+
+    border-radius:50%;
+
+    z-index:0;
+}
+
+.hero-ecosystem::after{
+    content:"";
+
+    position:absolute;
+
+    width:320px;
+    height:320px;
+
+    top:50%;
+    left:50%;
+
+    transform:translate(-50%,-50%);
+
+    border:1px dashed rgba(201,154,50,.18);
+
+    border-radius:50%;
+
+    z-index:0;
+}
+
+
+/* =========================================================
+   ECOSYSTEM NODES
+   ========================================================= */
+
+.ecosystem-node{
+    position:absolute;
+
+    width:165px;
+    min-height:125px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    text-align:center;
+
+    z-index:4;
+}
+
+.ecosystem-node strong{
+    display:block;
+
+    margin-top:10px;
+
+    font-size:16px;
+    line-height:1.25;
+
+    color:var(--primary-color);
+}
+
+.ecosystem-node small{
+    display:block;
+
+    margin-top:6px;
+
+    max-width:165px;
+
+    font-size:11px;
+    line-height:1.4;
+
+    color:#666;
+}
+
+
+/* =========================================================
+   NODE ICONS
+   ========================================================= */
+
+.node-icon{
+    width:70px;
+    height:70px;
+
+    border-radius:50%;
+
+    background:var(--primary-color);
+
+    border:3px solid #c99a32;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    color:#ffffff;
+
+    font-size:29px;
+
+    box-shadow:
+        0 8px 22px rgba(0,0,0,.13);
+}
+
+
+/* =========================================================
+   TEM COLUMN — RESEARCH
+   ========================================================= */
+
+.tem-icon{
+    position:relative;
+}
+
+.tem-icon::before{
+    content:"";
+
+    position:absolute;
+
+    width:16px;
+    height:40px;
+
+    top:13px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    border:2px solid #ffffff;
+
+    border-radius:3px;
+}
+
+.tem-icon::after{
+    content:"";
+
+    position:absolute;
+
+    width:34px;
+    height:5px;
+
+    bottom:13px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    background:#ffffff;
+
+    border-radius:3px;
+
+    box-shadow:
+        0 -16px 0 -1px #ffffff,
+        0 -27px 0 -1px #ffffff;
+}
+
+
+/* =========================================================
+   NODE POSITIONS
+   ========================================================= */
+
+.node-research{
+    top:0;
+    left:50%;
+
+    transform:translateX(-50%);
+}
+
+.node-innovation{
+    top:24%;
+    right:-2%;
+}
+
+.node-commercialization{
+    bottom:0;
+    right:9%;
+}
+
+.node-education{
+    bottom:0;
+    left:9%;
+}
+
+.node-industry{
+    top:24%;
+    left:-2%;
+}
+
+
+/* =========================================================
+   SUBTLE ECOSYSTEM CONNECTORS
+   ========================================================= */
+
+.ecosystem-node::before{
+    content:"";
+
+    position:absolute;
+
+    z-index:-1;
+
+    width:70px;
+    height:1px;
+
+    background:linear-gradient(
+        90deg,
+        rgba(201,154,50,0),
+        rgba(201,154,50,.65),
+        rgba(201,154,50,0)
+    );
+}
+
+
+/* Research → Innovation */
+.node-research::before{
+    width:190px;
+    transform:rotate(28deg);
+    top:88px;
+    left:115px;
+}
+
+/* Innovation → Commercialization */
+.node-innovation::before{
+    width:145px;
+    transform:rotate(72deg);
+    top:115px;
+    left:15px;
+}
+
+/* Commercialization → Education */
+.node-commercialization::before{
+    width:190px;
+    transform:rotate(0deg);
+    top:35px;
+    left:-115px;
+}
+
+/* Education → Industry */
+.node-education::before{
+    width:145px;
+    transform:rotate(-72deg);
+    top:115px;
+    left:15px;
+}
+
+/* Industry → Research */
+.node-industry::before{
+    width:190px;
+    transform:rotate(-28deg);
+    top:88px;
+    left:115px;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+   ========================================================= */
+
+@media (max-width:1100px){
+
+    .hero-grid{
+        grid-template-columns:1fr 1fr;
+        gap:30px;
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+    .hero-ecosystem{
+        transform:scale(.9);
+        transform-origin:center;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE — MOBILE
+   ========================================================= */
+
+@media (max-width:800px){
+
+    .hero-grid{
+        grid-template-columns:1fr;
+        gap:35px;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero-ecosystem{
+        height:520px;
+        max-width:650px;
+        transform:none;
+    }
+}
+
+
+@media (max-width:600px){
+
+    .hero-content h1{
+        font-size:38px;
+    }
+
+    .hero-content .hero-lead{
+        font-size:19px;
+    }
+
+    .hero-ecosystem{
+        height:470px;
+
+        transform:scale(.78);
+        transform-origin:top center;
+
+        margin-bottom:-80px;
+    }
+}
+/* =====================================================
+   HERO ECOSYSTEM — CENTER TAGLINE REFINEMENT
+   ===================================================== */
+
+.ecosystem-center .ecosystem-tagline {
+    width: 100%;
+    max-width: 220px;
+    margin: 0 auto;
+
+    text-align: center;
+    white-space: nowrap;
+
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    line-height: 1.2;
+
+    color: var(--primary-color);
+}
