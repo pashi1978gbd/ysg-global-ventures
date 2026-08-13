@@ -2529,6 +2529,18 @@ p {
         right: 18px;
     }
 
+    .node-education strong,
+    .node-education span {
+        position: relative;
+        left: -10px;
+    }
+
+    .node-commercialization strong,
+    .node-commercialization span {
+        position: relative;
+        right: -10px;
+    }
+
     .node-industry span,
     .node-innovation span {
         position: relative;
