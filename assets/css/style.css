@@ -2540,7 +2540,7 @@ p {
 
     .node-education span {
         position: relative;
-        left: -10px;
+        left: -18px;
     }
 
     .node-commercialization strong {
@@ -2562,7 +2562,7 @@ p {
     .node-industry span {
         position: relative;
         top: 6px;
-        left: 24px;
+        left: 38px;
     }
 
     .node-innovation span {
@@ -2580,7 +2580,7 @@ p {
     .node-innovation strong {
         position: relative;
         top: -6px;
-        right: 10px;
+        right: 18px;
     }
 
     .node-industry {
