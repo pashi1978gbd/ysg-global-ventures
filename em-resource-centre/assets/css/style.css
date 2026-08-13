@@ -50,8 +50,8 @@ body {
 
 .premrec-hero-grid {
     display: grid;
-    grid-template-columns: 1fr 0.95fr;
-    gap: 70px;
+    grid-template-columns: minmax(0, 1.12fr) minmax(360px, 0.88fr);
+    gap: 40px;
     align-items: center;
 }
 
@@ -77,7 +77,7 @@ body {
 
 .premrec-hero h1 {
     margin: 0 0 28px;
-    font-size: clamp(48px, 5vw, 72px);
+    font-size: clamp(48px, 4.3vw, 64px);
     line-height: 1.05;
     letter-spacing: -1.5px;
     color: #102f4d;
@@ -498,25 +498,25 @@ body {
 
 
 .label-source {
-    top: 75px;
-    right: 5px;
+    top: 58px;
+    right: -15px;
 }
 
 
 .label-optics {
-    top: 225px;
-    left: 5px;
+    top: 208px;
+    left: 0px;
 }
 
 
 .label-specimen {
-    top: 380px;
+    top: 350px;
     right: 0;
 }
 
 
 .label-analysis {
-    bottom: 18px;
+    bottom: 8px;
     left: 0;
 }
 
@@ -537,33 +537,33 @@ body {
 
 
 .line-source {
-    width: 105px;
-    top: 100px;
-    right: 100px;
-    transform: rotate(158deg);
+    width: 65px;
+    top: 62px;
+    right: 180px;
+    transform: none;
 }
 
 
 .line-optics {
-    width: 105px;
-    top: 245px;
-    left: 95px;
-    transform: rotate(12deg);
+    width: 90px;
+    top: 228px;
+    left: 92px;
+    transform: rotate(8deg);
 }
 
 
 .line-specimen {
-    width: 95px;
-    top: 400px;
-    right: 95px;
-    transform: rotate(-15deg);
+    width: 70px;
+    top: 365px;
+    left: 310px;
+    transform: none;
 }
 
 
 .line-analysis {
-    width: 100px;
-    bottom: 48px;
-    left: 95px;
+    width: 82px;
+    bottom: 35px;
+    left: 88px;
     transform: rotate(-18deg);
 }
 
@@ -572,7 +572,7 @@ body {
    ========================================= */
 
 .premrec-knowledge {
-    padding: 105px 0 115px;
+    padding: 70px 0 75px;
     background: #ffffff;
 }
 
@@ -603,7 +603,7 @@ body {
 .premrec-knowledge-heading h2 {
     margin: 0 0 20px;
 
-    font-size: clamp(34px, 4vw, 48px);
+    font-size: clamp(32px, 3.5vw, 44px);
     line-height: 1.15;
     letter-spacing: -0.8px;
 
@@ -761,7 +761,55 @@ body {
 
 }
 /* =========================================
-   RESPONSIVE
+   RESPONSIVE — HERO
+   ========================================= */
+
+/* =========================================
+   TABLET / SMALL DESKTOP
+   ========================================= */
+
+@media (max-width: 1250px) and (min-width: 901px) {
+
+    .premrec-hero-grid {
+        grid-template-columns: 0.92fr 0.78fr;
+        gap: 40px;
+    }
+
+    .premrec-hero-content {
+        max-width: 560px;
+    }
+
+    .premrec-hero h1 {
+        font-size: clamp(46px, 4.5vw, 60px);
+    }
+
+    .premrec-hero-visual {
+        transform: translateX(-35px) scale(0.88);
+        transform-origin: center center;
+    }
+
+    /* Keep scientific labels inside the viewport */
+    .label-source {
+        right: 28px;
+    }
+
+    .label-optics {
+        left: 18px;
+    }
+
+    .label-specimen {
+        right: 24px;
+    }
+
+    .label-analysis {
+        left: 18px;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE / TABLET
    ========================================= */
 
 @media (max-width: 900px) {
@@ -782,6 +830,34 @@ body {
     .premrec-hero-visual {
         min-height: 520px;
     }
+
+}
+
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .premrec-hero h1 {
+        font-size: 43px;
+    }
+
+    .premrec-hero-lead {
+        font-size: 20px;
+    }
+
+    .premrec-hero-content p:not(.premrec-hero-lead) {
+        font-size: 16px;
+    }
+
+    .premrec-hero-visual {
+        transform: scale(0.85);
+        transform-origin: top center;
+        min-height: 470px;
+    }
+
 }
 
 
@@ -811,7 +887,7 @@ body {
    ========================================= */
 
 .premrec-audience {
-    padding: 110px 0;
+    padding: 70px 0;
     background: #f7f8fa;
 }
 
@@ -829,7 +905,7 @@ body {
 .premrec-section-heading h2 {
     margin: 0 0 25px;
     color: #0f2f4f;
-    font-size: 48px;
+    font-size: 44px;
     line-height: 1.15;
     font-weight: 700;
 }
@@ -883,7 +959,7 @@ body {
     align-items: center;
     justify-content: center;
 
-    margin-bottom: 30px;
+    margin-bottom: 24px;
 
     background: #0f2f4f;
     color: #ffffff;
@@ -960,7 +1036,7 @@ body {
    ========================================= */
 
 .premrec-learning {
-    padding: 115px 0;
+    padding: 70px 0;
     background: #ffffff;
 }
 
@@ -976,7 +1052,7 @@ body {
 .premrec-learning .premrec-section-heading h2 {
     margin: 0 0 25px;
     color: #0f2f4f;
-    font-size: 48px;
+    font-size: 44px;
     line-height: 1.15;
     font-weight: 700;
 }
@@ -1197,7 +1273,7 @@ body {
    ========================================= */
 
 .premrec-domains {
-    padding: 115px 0;
+    padding: 70px 0;
     background: #f7f8fa;
 }
 
@@ -1215,7 +1291,7 @@ body {
 
     color: #0f2f4f;
 
-    font-size: 48px;
+    font-size: 44px;
     line-height: 1.15;
     font-weight: 700;
 }
@@ -1388,7 +1464,7 @@ body {
    ========================================= */
 
 .premrec-resources {
-    padding: 115px 0;
+    padding: 70px 0;
     background: #ffffff;
 }
 
@@ -1408,7 +1484,7 @@ body {
 
     color: #0f2f4f;
 
-    font-size: 48px;
+    font-size: 44px;
     line-height: 1.15;
     font-weight: 700;
 }
@@ -1592,7 +1668,7 @@ body {
    ========================================= */
 
 .practice-bridge {
-    padding: 110px 0;
+    padding: 80px 0;
     background: #f7f8fa;
 }
 
@@ -1614,7 +1690,7 @@ body {
 .practice-bridge .section-heading h2 {
     margin: 0 0 28px;
     color: #123456;
-    font-size: 48px;
+    font-size: 44px;
     line-height: 1.15;
     font-weight: 700;
 }
@@ -1799,11 +1875,11 @@ body {
 .premrec-nav {
     min-height: 82px;
 
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr) auto;
     align-items: center;
-    justify-content: space-between;
 
-    gap: 30px;
+    column-gap: 28px;
 }
 
 
@@ -1855,9 +1931,11 @@ body {
 .premrec-navigation {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
 
-    gap: 26px;
+    gap: 22px;
+
+    min-width: 0;
 }
 
 
@@ -1927,6 +2005,8 @@ body {
 
     text-decoration: none;
 
+    white-space: nowrap;
+
     transition:
         background 0.25s ease,
         transform 0.25s ease;
@@ -1944,14 +2024,34 @@ body {
    HEADER RESPONSIVE
    ========================================= */
 
-@media (max-width: 1050px) {
+@media (max-width: 1250px) and (min-width: 901px) {
+
+    .premrec-header {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
 
     .premrec-navigation {
-        gap: 18px;
+        gap: 14px;
     }
 
     .premrec-navigation a {
         font-size: 12px;
+    }
+
+    .premrec-nav-button {
+        padding: 10px 14px;
+        font-size: 11px;
+        white-space: nowrap;
+    }
+
+    .premrec-hero-grid {
+        gap: 10px;
+    }
+
+    .premrec-hero-visual {
+        transform: translateX(-70px) scale(0.80);
+        transform-origin: center center;
     }
 
 }
@@ -2431,6 +2531,32 @@ body {
 
         max-width: 300px;
 
+    }
+
+}
+
+/* =========================================
+   PrEMReC — 1200px HEADER REFINEMENT
+   ========================================= */
+
+@media (max-width: 1250px) and (min-width: 1051px) {
+
+    .premrec-nav {
+        gap: 12px;
+    }
+
+    .premrec-navigation {
+        gap: 12px;
+    }
+
+    .premrec-navigation a {
+        font-size: 11px;
+    }
+
+    .premrec-nav-button {
+        padding: 8px 12px;
+        font-size: 10px;
+        white-space: nowrap;
     }
 
 }
