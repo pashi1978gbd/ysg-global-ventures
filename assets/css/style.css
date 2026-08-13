@@ -2555,14 +2555,14 @@ p {
 
     .node-education strong,
     .node-commercialization strong {
-        font-size: 17px;
-        letter-spacing: -0.3px;
+        font-size: 15px;
+        letter-spacing: -0.4px;
     }
 
     .node-industry span {
         position: relative;
         top: 6px;
-        left: 14px;
+        left: 24px;
     }
 
     .node-innovation span {
@@ -2574,13 +2574,13 @@ p {
     .node-industry strong {
         position: relative;
         top: -6px;
-        left: 2px;
+        left: 10px;
     }
 
     .node-innovation strong {
         position: relative;
         top: -6px;
-        right: 2px;
+        right: 10px;
     }
 
     .node-industry {
