@@ -2523,10 +2523,12 @@ p {
 
     .node-education {
         left: 18px;
+        transform: translateX(-18px);
     }
 
     .node-commercialization {
         right: 18px;
+        transform: translateX(18px);
     }
 
     .node-education strong,
@@ -2557,6 +2559,14 @@ p {
         position: relative;
         top: -6px;
         right: -8px;
+    }
+
+    .node-industry {
+        transform: translateX(-28px);
+    }
+
+    .node-innovation {
+        transform: translateX(28px);
     }
 
 }
