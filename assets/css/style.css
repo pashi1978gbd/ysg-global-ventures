@@ -2533,16 +2533,30 @@ p {
         transform: translateX(18px);
     }
 
-    .node-education strong,
+    .node-education strong {
+        position: relative;
+        left: -4px;
+    }
+
     .node-education span {
         position: relative;
         left: -10px;
     }
 
-    .node-commercialization strong,
+    .node-commercialization strong {
+        position: relative;
+        right: -4px;
+    }
+
     .node-commercialization span {
         position: relative;
         right: 0;
+    }
+
+    .node-education strong,
+    .node-commercialization strong {
+        font-size: 17px;
+        letter-spacing: -0.3px;
     }
 
     .node-industry span {
@@ -2560,13 +2574,13 @@ p {
     .node-industry strong {
         position: relative;
         top: -6px;
-        left: -8px;
+        left: 2px;
     }
 
     .node-innovation strong {
         position: relative;
         top: -6px;
-        right: -8px;
+        right: 2px;
     }
 
     .node-industry {
