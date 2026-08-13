@@ -2500,9 +2500,7 @@ p {
 @media (max-width: 720px) {
 
     .vision-principles-grid {
-
-        grid-template-columns:
-            1fr;
+        grid-template-columns: 1fr;
     }
 
     .hero-actions {
@@ -2520,6 +2518,10 @@ p {
         transform: scale(1.06);
         transform-origin: center center;
     }
+
+    /* -----------------------------------------
+       MOBILE HERO NODE POSITIONING
+       ----------------------------------------- */
 
     .node-education {
         left: 18px;
@@ -2540,13 +2542,19 @@ p {
     .node-commercialization strong,
     .node-commercialization span {
         position: relative;
-        right: -10px;
+        right: 0;
     }
 
-    .node-industry span,
+    .node-industry span {
+        position: relative;
+        top: 6px;
+        left: 14px;
+    }
+
     .node-innovation span {
         position: relative;
         top: 6px;
+        right: 14px;
     }
 
     .node-industry strong {
@@ -2562,11 +2570,11 @@ p {
     }
 
     .node-industry {
-        transform: translateX(-28px);
+        transform: translateX(-38px);
     }
 
     .node-innovation {
-        transform: translateX(28px);
+        transform: translateX(38px);
     }
 
 }
