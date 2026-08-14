@@ -523,9 +523,9 @@ body {
 
 
 .line-source {
-    width: 22px;
+    width: 14px;
     top: 62px;
-    right: 158px;
+    right: 163px;
     transform: none;
 }
 
@@ -539,9 +539,9 @@ body {
 
 
 .line-specimen {
-    width: 50px;
+    width: 14px;
     top: 365px;
-    left: 232px;
+    left: 310px;
     transform: none;
 }
 
