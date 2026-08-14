@@ -523,9 +523,9 @@ body {
 
 
 .line-source {
-    width: 14px;
+    width: 65px;
     top: 62px;
-    right: 163px;
+    right: 180px;
     transform: none;
 }
 
@@ -539,7 +539,7 @@ body {
 
 
 .line-specimen {
-    width: 14px;
+    width: 70px;
     top: 365px;
     left: 310px;
     transform: none;
@@ -2591,7 +2591,7 @@ body {
     /* Connecting lines */
 
     .line-source {
-        width: 55px;
+        width: 14px;
         top: 62px;
         right: 145px;
     }
@@ -2604,7 +2604,7 @@ body {
     }
 
     .line-specimen {
-        width: 50px;
+        width: 14px;
         top: 365px;
         left: 235px;
         transform: none;
