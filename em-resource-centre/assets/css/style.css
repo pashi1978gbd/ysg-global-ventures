@@ -123,20 +123,6 @@ body {
     transform: translateY(-2px);
 }
 
-
-/* =========================================
-   HERO SCIENTIFIC VISUAL
-   ========================================= */
-
-.premrec-hero-visual {
-    position: relative;
-    min-height: 570px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
 /* =========================================
    TEM COLUMN
    ========================================= */
@@ -875,13 +861,8 @@ body {
         font-size: 16px;
     }
 
-    .premrec-hero-visual {
-        transform: scale(0.85);
-        transform-origin: top center;
-        min-height: 470px;
-    }
-
 }
+
 /* =========================================
    PrEMReC AUDIENCE SECTION
    ========================================= */
@@ -2072,18 +2053,30 @@ body {
 
 @media (max-width: 600px) {
 
+    .premrec-nav {
+        min-height: 74px;
+        grid-template-columns: minmax(0, 1fr) auto;
+        column-gap: 14px;
+    }
+
+    .premrec-brand {
+        min-width: 0;
+    }
+
     .premrec-brand-main {
         font-size: 21px;
     }
 
     .premrec-brand-sub {
+        max-width: 100%;
         font-size: 8px;
+        letter-spacing: 0.07em;
+        white-space: normal;
     }
 
     .premrec-nav-button {
-        padding: 9px 13px;
-
-        font-size: 11px;
+        padding: 9px 11px;
+        font-size: 10px;
     }
 
 }
@@ -2557,6 +2550,71 @@ body {
         padding: 8px 12px;
         font-size: 10px;
         white-space: nowrap;
+    }
+
+}
+
+/* =========================================
+   PrEMReC — MOBILE HERO VISUAL CALIBRATION
+   ========================================= */
+
+@media (max-width: 600px) {
+
+    .premrec-hero-visual {
+        width: 100%;
+        min-height: 500px;
+        overflow: visible;
+    }
+
+    /* Scientific labels */
+
+    .label-source {
+        top: 58px;
+        right: 8px;
+    }
+
+    .label-optics {
+        top: 208px;
+        left: 8px;
+    }
+
+    .label-specimen {
+        top: 350px;
+        right: 8px;
+    }
+
+    .label-analysis {
+        bottom: 8px;
+        left: 8px;
+    }
+
+    /* Connecting lines */
+
+    .line-source {
+        width: 55px;
+        top: 62px;
+        right: 145px;
+    }
+
+    .line-optics {
+        width: 55px;
+        top: 228px;
+        left: 78px;
+        transform: rotate(8deg);
+    }
+
+    .line-specimen {
+        width: 50px;
+        top: 365px;
+        left: 235px;
+        transform: none;
+    }
+
+    .line-analysis {
+        width: 55px;
+        bottom: 35px;
+        left: 78px;
+        transform: rotate(-18deg);
     }
 
 }
