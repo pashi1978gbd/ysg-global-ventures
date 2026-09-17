@@ -854,6 +854,77 @@
 
         }
 
+        /* =================================================
+   ABOUT PAGE — PEOPLE PHOTOGRAPHS & CARDS
+================================================== */
+
+.about-people .two-column {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 48px;
+    align-items: stretch;
+}
+
+.about-people .eco-card {
+    display: flex;
+    flex-direction: column;
+    min-width: 0;
+    height: 100%;
+}
+
+.about-person-photo {
+    width: 100%;
+    height: 356px;
+    margin-bottom: 28px;
+    overflow: hidden;
+    background: var(--mist);
+    flex-shrink: 0;
+}
+
+.about-person-photo img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+}
+
+/* Equalise the content area of both people cards */
+
+.about-people .eco-card > h3 {
+    margin-top: 0;
+}
+
+.about-people .eco-card > p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* =================================================
+   ABOUT PAGE — PEOPLE RESPONSIVE
+================================================== */
+
+@media (max-width: 768px) {
+
+    .about-people .two-column {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .about-person-photo {
+        height: 300px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .about-person-photo {
+        height: 260px;
+    }
+
+}
+
     </style>
 </head>
 
@@ -986,6 +1057,13 @@
 
                     <article class="eco-card">
 
+                        <div class="about-person-photo">
+                            <img
+                                src="../assets/images/prashanth-gudibande.png"
+                                alt="Prashanth Gudibande"
+                            >
+                        </div>
+
                         <div class="eyebrow">
                             FOUNDER &amp; PROPRIETOR
                         </div>
@@ -1013,6 +1091,13 @@
                     <!-- GAURAV -->
 
                     <article class="eco-card">
+
+                        <div class="about-person-photo">
+                            <img
+                                src="../assets/images/gaurav-sharma-about.jpg"
+                                alt="Gaurav Sharma"
+                            >
+                        </div>
 
                         <div class="eyebrow">
                             SCIENTIFIC &amp; TECHNICAL CONTRIBUTOR
@@ -1062,7 +1147,7 @@
                 </div>
 
 
-                <div class="two-column">
+                <div class="two-column about-people-grid">
 
                     <div class="section-copy">
 
