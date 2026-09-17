@@ -1,0 +1,2052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About YSG Global Ventures</title>
+
+    <meta
+        name="description"
+        content="About YSG Global Ventures — building knowledge, creating value."
+    >
+
+    <!-- Shared YSG Global Ventures stylesheet -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+        <style>
+
+        /* =================================================
+           ABOUT PAGE — SECTION 03
+           Experience → Expertise → Knowledge
+        ================================================== */
+
+        .about-bridge {
+            display: flex;
+            align-items: stretch;
+            margin-top: 56px;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-bridge-item {
+            flex: 1;
+            padding: 28px 30px;
+            position: relative;
+        }
+
+        .about-bridge-item span {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .about-bridge-item small {
+            display: block;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+        .about-bridge-line {
+            width: 1px;
+            background: var(--border);
+            margin: 20px 0;
+        }
+
+
+        /* =================================================
+           ABOUT PAGE — RESPONSIVE BRIDGE
+        ================================================== */
+
+        @media (max-width: 768px) {
+
+            .about-bridge {
+                display: block;
+            }
+
+            .about-bridge-line {
+                width: auto;
+                height: 1px;
+                margin: 0 20px;
+            }
+
+            .about-bridge-item {
+                padding: 24px 20px;
+            }
+
+        }
+
+                /* =================================================
+           ABOUT PAGE — SECTION 04
+           Interactive Knowledge Journey
+        ================================================== */
+
+        .about-journey {
+            background: var(--mist);
+        }
+
+        .journey-tabs {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+            margin-top: 52px;
+        }
+
+        .journey-tab {
+            position: relative;
+            border: 0;
+            border-right: 1px solid var(--border);
+            background: transparent;
+            padding: 24px 28px;
+            text-align: left;
+            font-family: inherit;
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--muted);
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .journey-tab:last-child {
+            border-right: 0;
+        }
+
+        .journey-tab span {
+            display: block;
+            margin-bottom: 8px;
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+        .journey-tab:hover {
+            color: var(--navy);
+            background: rgba(255, 255, 255, 0.55);
+        }
+
+        .journey-tab.active {
+            color: var(--navy);
+            background: var(--white);
+        }
+
+        .journey-tab.active::after {
+            content: "";
+            position: absolute;
+            left: 28px;
+            right: 28px;
+            bottom: -1px;
+            height: 3px;
+            background: var(--gold);
+        }
+
+
+        .journey-panel {
+            min-height: 220px;
+            padding: 56px 0 20px;
+        }
+
+        .journey-content {
+            display: none;
+            grid-template-columns: 100px 1fr;
+            gap: 32px;
+            align-items: start;
+            max-width: 850px;
+        }
+
+        .journey-content.active {
+            display: grid;
+        }
+
+        .journey-number {
+            color: var(--gold);
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        .journey-content h3 {
+            margin: 0 0 16px;
+            color: var(--navy);
+            font-size: 30px;
+        }
+
+        .journey-content p {
+            max-width: 720px;
+            margin: 0;
+            color: var(--muted);
+            font-size: 17px;
+            line-height: 1.8;
+        }
+
+
+        /* =================================================
+           SECTION 04 — RESPONSIVE
+        ================================================== */
+
+        @media (max-width: 768px) {
+
+            .journey-tabs {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .journey-tab:nth-child(2) {
+                border-right: 0;
+            }
+
+            .journey-tab:nth-child(-n+2) {
+                border-bottom: 1px solid var(--border);
+            }
+
+            .journey-panel {
+                padding-top: 40px;
+            }
+
+            .journey-content {
+                grid-template-columns: 1fr;
+                gap: 18px;
+            }
+
+            .journey-number {
+                font-size: 32px;
+            }
+
+            .journey-content h3 {
+                font-size: 26px;
+            }
+
+        }
+
+                /* =================================================
+           ABOUT PAGE — SECTION 05
+           Publications
+        ================================================== */
+
+        .about-publications {
+            background: var(--white);
+        }
+
+        .about-publications .section-heading {
+            max-width: 760px;
+            margin-bottom: 64px;
+        }
+
+        .about-publications .section-heading p {
+            max-width: 650px;
+            color: var(--muted);
+        }
+
+
+        /* -----------------------------------------------
+           TWO PUBLICATION COLUMNS
+        ------------------------------------------------ */
+
+        .about-publication-columns {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 72px;
+        }
+
+        .about-publication-column {
+            min-width: 0;
+        }
+
+        .about-publication-label {
+            margin-bottom: 12px;
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .about-publication-column > h3 {
+            margin: 0 0 18px;
+            color: var(--navy);
+            font-size: 30px;
+            line-height: 1.25;
+        }
+
+        .about-publication-intro {
+            min-height: 84px;
+            margin: 0 0 36px;
+            max-width: 520px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+
+        /* -----------------------------------------------
+           PUBLICATION CARDS
+        ------------------------------------------------ */
+
+        .about-publication-card {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            gap: 28px;
+            padding: 28px 0;
+            border-top: 1px solid var(--border);
+        }
+
+        .about-publication-card:last-child {
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-publication-image {
+            width: 150px;
+            height: 210px;
+            overflow: hidden;
+            background: var(--mist);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .about-publication-image img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        } 
+
+        .about-publication-content {
+            padding-top: 4px;
+        }
+
+        .about-publication-content .book-meta {
+            margin-bottom: 12px;
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.8px;
+        }
+
+        .about-publication-content h4 {
+            margin: 0 0 12px;
+            color: var(--navy);
+            font-size: 21px;
+            line-height: 1.35;
+        }
+
+        .about-publication-content p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.7;
+        }
+
+
+        /* -----------------------------------------------
+           RESPONSIVE
+        ------------------------------------------------ */
+
+        @media (max-width: 900px) {
+
+            .about-publication-columns {
+                gap: 48px;
+            }
+
+            .about-publication-card {
+                grid-template-columns: 120px 1fr;
+                gap: 22px;
+            }
+
+            .about-publication-image {
+                width: 120px;
+                height: 170px;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .about-publication-columns {
+                grid-template-columns: 1fr;
+                gap: 64px;
+            }
+
+            .about-publication-card {
+                grid-template-columns: 120px 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .about-publication-card {
+                grid-template-columns: 95px 1fr;
+                gap: 18px;
+            }
+
+            .about-publication-image {
+                width: 95px;
+                height: 135px;
+            }
+
+            .about-publication-content h4 {
+                font-size: 18px;
+            }
+
+        }
+
+                /* =================================================
+           ABOUT PAGE — SECTION 06
+           Knowledge Progression
+        ================================================== */
+
+        .about-progression {
+            background: var(--mist);
+        }
+
+        .about-progression .section-heading {
+            max-width: 760px;
+            margin-bottom: 64px;
+        }
+
+        .about-progression .section-heading p {
+            max-width: 680px;
+            color: var(--muted);
+        }
+
+
+        /* -----------------------------------------------
+           PROGRESSION TRACK
+        ------------------------------------------------ */
+
+        .progression-track {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .progression-step {
+            position: relative;
+            min-height: 300px;
+            padding: 32px 26px;
+            border-right: 1px solid var(--border);
+            background: transparent;
+            transition: var(--transition);
+        }
+
+        .progression-step:last-child {
+            border-right: 0;
+        }
+
+        .progression-step:hover,
+        .progression-step.active {
+            background: var(--white);
+        }
+
+
+        /* -----------------------------------------------
+           NUMBER
+        ------------------------------------------------ */
+
+        .progression-number {
+            margin-bottom: 34px;
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+
+        /* -----------------------------------------------
+           STEP CONTENT
+        ------------------------------------------------ */
+
+        .progression-step h3 {
+            margin: 0 0 16px;
+            color: var(--navy);
+            font-size: 23px;
+            line-height: 1.3;
+        }
+
+        .progression-step p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+
+        /* -----------------------------------------------
+           PREMREC LINK
+        ------------------------------------------------ */
+
+        .progression-link {
+            display: inline-block;
+            margin-top: 22px;
+            color: var(--navy);
+            font-size: 13px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .progression-link:hover {
+            color: var(--gold);
+        }
+
+
+        /* -----------------------------------------------
+           RESPONSIVE
+        ------------------------------------------------ */
+
+        @media (max-width: 1000px) {
+
+            .progression-track {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .progression-step:nth-child(3) {
+                border-right: 0;
+            }
+
+            .progression-step:nth-child(-n+3) {
+                border-bottom: 1px solid var(--border);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .progression-track {
+                grid-template-columns: 1fr;
+            }
+
+            .progression-step {
+                min-height: auto;
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .progression-step:last-child {
+                border-bottom: 0;
+            }
+
+        }
+
+                /* =================================================
+           ABOUT PAGE — SECTION 07
+           Wider Knowledge Domains
+        ================================================== */
+
+        .about-domains {
+            background: var(--white);
+        }
+
+        .about-domains .section-heading {
+            max-width: 780px;
+            margin-bottom: 64px;
+        }
+
+        .about-domains .section-heading p {
+            max-width: 700px;
+            color: var(--muted);
+        }
+
+
+        /* -----------------------------------------------
+           DOMAIN GRID
+        ------------------------------------------------ */
+
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .domain-block {
+            display: grid;
+            grid-template-columns: 42px 1fr;
+            gap: 22px;
+            min-height: 300px;
+            padding: 34px 30px;
+            border-right: 1px solid var(--border);
+            transition: var(--transition);
+        }
+
+        .domain-block:last-child {
+            border-right: 0;
+        }
+
+        .domain-block:hover {
+            background: var(--mist);
+        }
+
+
+        /* -----------------------------------------------
+           DOMAIN NUMBER
+        ------------------------------------------------ */
+
+        .domain-number {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding-top: 3px;
+        }
+
+
+        /* -----------------------------------------------
+           DOMAIN CONTENT
+        ------------------------------------------------ */
+
+        .domain-content h3 {
+            margin: 0 0 18px;
+            color: var(--navy);
+            font-size: 23px;
+            line-height: 1.35;
+        }
+
+        .domain-content p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+
+        /* -----------------------------------------------
+           DOMAIN TAGS
+        ------------------------------------------------ */
+
+        .domain-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 28px;
+        }
+
+        .domain-tags span {
+            display: inline-block;
+            padding: 6px 10px;
+            border: 1px solid var(--border);
+            color: var(--muted);
+            background: var(--white);
+            font-size: 11px;
+            line-height: 1.4;
+        }
+
+
+        /* -----------------------------------------------
+           RESPONSIVE
+        ------------------------------------------------ */
+
+        @media (max-width: 900px) {
+
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .domain-block {
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .domain-block:last-child {
+                border-bottom: 0;
+            }
+
+        }
+
+
+        @media (max-width: 600px) {
+
+            .domain-block {
+                grid-template-columns: 34px 1fr;
+                gap: 16px;
+                padding: 28px 22px;
+                min-height: auto;
+            }
+
+            .domain-content h3 {
+                font-size: 21px;
+            }
+
+        }
+
+                /* =================================================
+           ABOUT PAGE — SECTION 08
+           Building, One Block at a Time
+        ================================================== */
+
+        .about-building {
+            background: var(--mist);
+        }
+
+        .about-building .section-heading {
+            max-width: 800px;
+            margin-bottom: 64px;
+        }
+
+        .about-building .section-heading p {
+            max-width: 720px;
+            color: var(--muted);
+        }
+
+
+        /* -----------------------------------------------
+           BUILDING TRACK
+        ------------------------------------------------ */
+
+        .building-track {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .building-step {
+            position: relative;
+            min-height: 250px;
+            padding: 32px 26px;
+            border-right: 1px solid var(--border);
+            background: transparent;
+            transition: var(--transition);
+        }
+
+        .building-step:last-child {
+            border-right: 0;
+        }
+
+        .building-step:hover {
+            background: var(--white);
+        }
+
+
+        /* -----------------------------------------------
+           NUMBER
+        ------------------------------------------------ */
+
+        .building-number {
+            margin-bottom: 34px;
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 2px;
+        }
+
+
+        /* -----------------------------------------------
+           STEP CONTENT
+        ------------------------------------------------ */
+
+        .building-step h3 {
+            margin: 0 0 14px;
+            color: var(--navy);
+            font-size: 22px;
+            line-height: 1.35;
+        }
+
+        .building-step p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.75;
+        }
+
+
+        /* -----------------------------------------------
+           RESPONSIVE
+        ------------------------------------------------ */
+
+        @media (max-width: 1000px) {
+
+            .building-track {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .building-step:nth-child(3) {
+                border-right: 0;
+            }
+
+            .building-step:nth-child(-n+3) {
+                border-bottom: 1px solid var(--border);
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            .building-track {
+                grid-template-columns: 1fr;
+            }
+
+            .building-step {
+                min-height: auto;
+                border-right: 0;
+                border-bottom: 1px solid var(--border);
+            }
+
+            .building-step:last-child {
+                border-bottom: 0;
+            }
+
+        }
+
+                /* =================================================
+           ABOUT PAGE — SECTION 09
+           Final Connect CTA
+        ================================================== */
+
+        .about-connect {
+            background: var(--white);
+        }
+
+        .about-connect-inner {
+            max-width: 900px;
+            padding: 20px 0 10px;
+        }
+
+        .about-connect .eyebrow {
+            margin-bottom: 24px;
+        }
+
+        .about-connect h2 {
+            max-width: 850px;
+            margin: 0 0 24px;
+            color: var(--navy);
+        }
+
+        .about-connect p {
+            max-width: 760px;
+            margin: 0 0 30px;
+            color: var(--muted);
+            font-size: 16px;
+            line-height: 1.75;
+        }
+
+        .about-connect .btn {
+            display: inline-block;
+        }
+
+
+        /* -----------------------------------------------
+           MOBILE
+        ------------------------------------------------ */
+
+        @media (max-width: 700px) {
+
+            .about-connect-inner {
+                padding: 10px 0;
+            }
+
+            .about-connect h2 {
+                max-width: 100%;
+            }
+
+            .about-connect p {
+                font-size: 15px;
+            }
+
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- =====================================================
+         HEADER
+    ====================================================== -->
+
+    <header class="site-header">
+        <div class="container header-inner">
+
+            <a href="../index.html" class="brand">
+                <img
+                    src="../logo-header.png"
+                    alt="YSG Global Ventures"
+                >
+            </a>
+
+            <nav class="main-nav" aria-label="Main navigation">
+
+                <a href="../index.html">Home</a>
+
+                <a href="index.html" class="active">About</a>
+
+                <a href="../vision-mission/index.html">
+                    Vision &amp; Mission
+                </a>
+
+                <a href="../index.html#ecosystem">
+                    Ecosystem
+                </a>
+
+                <a href="../index.html#publications">
+                    Publications
+                </a>
+
+                <a href="../em-resource-centre/index.html">
+                    PrEMReC
+                </a>
+
+                <a href="../index.html#resources">
+                    Resources
+                </a>
+
+                <a href="../index.html#connect">
+                    Connect
+                </a>
+
+            </nav>
+
+        </div>
+    </header>
+
+
+    <!-- =====================================================
+         MAIN CONTENT
+    ====================================================== -->
+
+    <main>
+
+        <!-- =================================================
+             01 — IDENTITY
+        ================================================== -->
+
+        <section class="section vision-section about-intro">
+
+            <div class="container two-column">
+
+                <!-- LEFT -->
+                <div>
+
+                    <div class="eyebrow">
+                        ABOUT YSG GLOBAL VENTURES
+                    </div>
+
+                    <h1>
+                        Building Knowledge.<br>
+                        Creating Value.
+                    </h1>
+
+                </div>
+
+
+                <!-- RIGHT -->
+                <div class="section-copy">
+
+                    <p class="lead">
+                        YSG Global Ventures is built around a simple idea:
+                        knowledge becomes more valuable when it can be
+                        understood, shared and applied.
+                    </p>
+
+                    <p>
+                        The organisation brings together professional
+                        experience, scientific knowledge, publishing and
+                        practical learning to develop resources and
+                        platforms that connect ideas with real-world
+                        application.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- =================================================
+             02 — PEOPLE
+        ================================================== -->
+
+        <section class="section about-people">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="eyebrow">
+                        THE PEOPLE BEHIND YSG
+                    </div>
+
+                    <h2>
+                        Experience Meets Expertise.
+                    </h2>
+                </div>
+
+
+                <div class="two-column">
+
+                    <!-- PRASHANTH -->
+
+                    <article class="eco-card">
+
+                        <div class="eyebrow">
+                            FOUNDER &amp; PROPRIETOR
+                        </div>
+
+                        <h3>
+                            Prashanth Gudibande
+                        </h3>
+
+                        <p>
+                            Bringing decades of professional experience
+                            across life sciences, scientific technology,
+                            business development and knowledge-driven
+                            initiatives.
+                        </p>
+
+                        <p>
+                            His work focuses on connecting experience,
+                            ideas and practical application to create
+                            meaningful knowledge resources.
+                        </p>
+
+                    </article>
+
+
+                    <!-- GAURAV -->
+
+                    <article class="eco-card">
+
+                        <div class="eyebrow">
+                            SCIENTIFIC &amp; TECHNICAL CONTRIBUTOR
+                        </div>
+
+                        <h3>
+                            Gaurav Sharma
+                        </h3>
+
+                        <p>
+                            Contributing scientific and technical expertise
+                            in Electron Microscopy and its application
+                            across life-science and pharmaceutical
+                            environments.
+                        </p>
+
+                        <p>
+                            His collaboration strengthens the scientific
+                            foundation of YSG's Electron Microscopy
+                            knowledge initiatives.
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- =================================================
+             03 — COMPLEMENTARITY
+        ================================================== -->
+
+        <section class="section about-complementarity">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="eyebrow">
+                        THE YSG APPROACH
+                    </div>
+
+                    <h2>
+                        Where Experience Meets Expertise.
+                    </h2>
+                </div>
+
+
+                <div class="two-column">
+
+                    <div class="section-copy">
+
+                        <p class="lead">
+                            YSG Global Ventures brings together two
+                            complementary dimensions of knowledge:
+                            practical experience and scientific expertise.
+                        </p>
+
+                    </div>
+
+
+                    <div class="section-copy">
+
+                        <p>
+                            Experience provides context, perspective and
+                            an understanding of how ideas work in the real
+                            world. Expertise provides depth, precision and
+                            technical understanding.
+                        </p>
+
+                        <p>
+                            When these dimensions come together, knowledge
+                            can move beyond information — becoming something
+                            that can be communicated, developed and applied.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="about-bridge">
+
+                    <div class="about-bridge-item">
+                        <span>EXPERIENCE</span>
+                        <small>Context · Perspective · Application</small>
+                    </div>
+
+                    <div class="about-bridge-line"></div>
+
+                    <div class="about-bridge-item">
+                        <span>EXPERTISE</span>
+                        <small>Depth · Precision · Scientific Understanding</small>
+                    </div>
+
+                    <div class="about-bridge-line"></div>
+
+                    <div class="about-bridge-item">
+                        <span>KNOWLEDGE</span>
+                        <small>Shared · Developed · Applied</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- =================================================
+             04 — FROM EXPERIENCE TO KNOWLEDGE
+        ================================================== -->
+
+        <section class="section about-journey">
+
+            <div class="container">
+
+                <div class="section-heading">
+                    <div class="eyebrow">
+                        THE JOURNEY
+                    </div>
+
+                    <h2>
+                        From Experience to Knowledge.
+                    </h2>
+                </div>
+
+
+                <div class="journey-tabs" role="tablist">
+
+                    <button
+                        class="journey-tab active"
+                        type="button"
+                        role="tab"
+                        aria-selected="true"
+                        data-stage="experience"
+                    >
+                        <span>01</span>
+                        Experience
+                    </button>
+
+
+                    <button
+                        class="journey-tab"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        data-stage="insight"
+                    >
+                        <span>02</span>
+                        Insight
+                    </button>
+
+
+                    <button
+                        class="journey-tab"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        data-stage="knowledge"
+                    >
+                        <span>03</span>
+                        Knowledge
+                    </button>
+
+
+                    <button
+                        class="journey-tab"
+                        type="button"
+                        role="tab"
+                        aria-selected="false"
+                        data-stage="application"
+                    >
+                        <span>04</span>
+                        Application
+                    </button>
+
+                </div>
+
+
+                <div class="journey-panel">
+
+                    <div
+                        class="journey-content active"
+                        data-content="experience"
+                    >
+                        <div class="journey-number">01</div>
+
+                        <div>
+                            <h3>Experience</h3>
+
+                            <p>
+                                Experience provides the context from which
+                                questions, observations and ideas emerge.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="journey-content"
+                        data-content="insight"
+                    >
+                        <div class="journey-number">02</div>
+
+                        <div>
+                            <h3>Insight</h3>
+
+                            <p>
+                                Reflection turns experience into insight —
+                                identifying patterns, connections and
+                                possibilities that may otherwise remain
+                                unnoticed.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="journey-content"
+                        data-content="knowledge"
+                    >
+                        <div class="journey-number">03</div>
+
+                        <div>
+                            <h3>Knowledge</h3>
+
+                            <p>
+                                Insight becomes knowledge when it can be
+                                organised, communicated, tested and shared.
+                            </p>
+                        </div>
+                    </div>
+
+
+                    <div
+                        class="journey-content"
+                        data-content="application"
+                    >
+                        <div class="journey-number">04</div>
+
+                        <div>
+                            <h3>Application</h3>
+
+                            <p>
+                                Knowledge creates value when it can be
+                                translated into learning, better decisions,
+                                practical solutions or new possibilities.
+                            </p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- =================================================
+             05 — PUBLICATIONS
+        ================================================== -->
+
+        <section class="section about-publications" id="about-publications">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        KNOWLEDGE IN PRINT
+                    </div>
+
+                    <h2>
+                        Publications.
+                    </h2>
+
+                    <p>
+                        Ideas become part of a wider knowledge ecosystem
+                        when they are documented, developed and shared.
+                    </p>
+
+                </div>
+
+
+                <div class="about-publication-columns">
+
+
+                    <!-- =================================================
+                         ELECTRON MICROSCOPY
+                    ================================================== -->
+
+                    <div class="about-publication-column">
+
+                        <div class="about-publication-label">
+                            SCIENCE &amp; TECHNICAL KNOWLEDGE
+                        </div>
+
+                        <h3>
+                            Electron Microscopy
+                        </h3>
+
+                        <p class="about-publication-intro">
+                            A growing body of practical and application-focused
+                            knowledge designed to make Electron Microscopy more
+                            accessible to students, operators, researchers and
+                            professionals.
+                        </p>
+
+
+                        <!-- EM BOOK 01 -->
+
+                        <article class="about-publication-card">
+
+                            <div class="about-publication-image">
+
+                                <img
+                                    src="../assets/images/electron-microscopy-for-beginners.jpg"
+                                    alt="Electron Microscopy for Beginners book cover"
+                                >
+
+                            </div>
+
+                            <div class="about-publication-content">
+
+                                <div class="book-meta">
+                                    ELECTRON MICROSCOPY · VOLUME 1
+                                </div>
+
+                                <h4>
+                                    Electron Microscopy for Beginners
+                                </h4>
+
+                                <p>
+                                    A practical introduction to electron
+                                    microscopy and its foundational concepts,
+                                    techniques and applications.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- EM BOOK 02 -->
+
+                        <article class="about-publication-card">
+
+                            <div class="about-publication-image">
+
+                                <img
+                                    src="../assets/images/electron-microscopy-in-life-sciences.jpg"
+                                    alt="Electron Microscopy in Life Sciences book cover"
+                                >
+
+                            </div>
+
+                            <div class="about-publication-content">
+
+                                <div class="book-meta">
+                                    ELECTRON MICROSCOPY · VOLUME 2
+                                </div>
+
+                                <h4>
+                                    Electron Microscopy in Life Sciences
+                                </h4>
+
+                                <p>
+                                    Extending Electron Microscopy knowledge
+                                    into life-science research and practical
+                                    applications.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+
+                    <!-- =================================================
+                         OTHER AREAS OF INTEREST
+                    ================================================== -->
+
+                    <div class="about-publication-column">
+
+                        <div class="about-publication-label">
+                            IDEAS &amp; PERSPECTIVES
+                        </div>
+
+                        <h3>
+                            Other Areas of Interest
+                        </h3>
+
+                        <p class="about-publication-intro">
+                            Publishing also provides a space to explore
+                            decisions, professional experiences, emerging
+                            ideas and the changing environment around us.
+                        </p>
+
+
+                        <!-- OTHER BOOK 01 -->
+
+                        <article class="about-publication-card">
+
+                            <div class="about-publication-image">
+
+                                <img
+                                    src="../assets/images/turning-points.jpg"
+                                    alt="Turning Points book cover"
+                                >
+
+                            </div>
+
+                            <div class="about-publication-content">
+
+                                <div class="book-meta">
+                                    REFLECTIONS · PERSPECTIVES
+                                </div>
+
+                                <h4>
+                                    Turning Points
+                                </h4>
+
+                                <p>
+                                    Reflections on change, decisions and the
+                                    defining moments that shape professional
+                                    and personal journeys.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+
+                        <!-- OTHER BOOK 02 -->
+
+                        <article class="about-publication-card">
+
+                            <div class="about-publication-image">
+
+                                <img
+                                    src="../assets/images/decision-overload-economy.jpg"
+                                    alt="The Decision Overload Economy book cover"
+                                >
+
+                            </div>
+
+                            <div class="about-publication-content">
+
+                                <div class="book-meta">
+                                    TECHNOLOGY · DECISION MAKING
+                                </div>
+
+                                <h4>
+                                    The Decision Overload Economy
+                                </h4>
+
+                                <p>
+                                    Exploring how information abundance,
+                                    artificial intelligence and uncertainty
+                                    are reshaping modern decision-making.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- =================================================
+             06 — KNOWLEDGE PROGRESSION
+        ================================================== -->
+
+        <section class="section about-progression">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        FROM PUBLICATION TO PRACTICE
+                    </div>
+
+                    <h2>
+                        Books → Resources → Learning.
+                    </h2>
+
+                    <p>
+                        Knowledge can take different forms — from a published
+                        idea to a practical resource, and from learning to
+                        application.
+                    </p>
+
+                </div>
+
+
+                <div class="progression-track">
+
+
+                    <article class="progression-step active">
+
+                        <div class="progression-number">
+                            01
+                        </div>
+
+                        <h3>
+                            Books
+                        </h3>
+
+                        <p>
+                            Ideas documented and developed into structured
+                            knowledge.
+                        </p>
+
+                    </article>
+
+
+                    <article class="progression-step">
+
+                        <div class="progression-number">
+                            02
+                        </div>
+
+                        <h3>
+                            Resources
+                        </h3>
+
+                        <p>
+                            Knowledge organised into accessible resources
+                            for exploration and reference.
+                        </p>
+
+                    </article>
+
+
+                    <article class="progression-step">
+
+                        <div class="progression-number">
+                            03
+                        </div>
+
+                        <h3>
+                            PrEMReC
+                        </h3>
+
+                        <p>
+                            Practical Electron Microscopy knowledge brought
+                            together through a dedicated resource centre.
+                        </p>
+
+                        <a
+                            href="../em-resource-centre/index.html"
+                            class="progression-link"
+                        >
+                            Explore PrEMReC →
+                        </a>
+
+                    </article>
+
+
+                    <article class="progression-step">
+
+                        <div class="progression-number">
+                            04
+                        </div>
+
+                        <h3>
+                            Learning
+                        </h3>
+
+                        <p>
+                            Knowledge becomes useful when it supports
+                            understanding, capability and continued learning.
+                        </p>
+
+                    </article>
+
+
+                    <article class="progression-step">
+
+                        <div class="progression-number">
+                            05
+                        </div>
+
+                        <h3>
+                            Practical Solutions
+                        </h3>
+
+                        <p>
+                            Learning can ultimately be translated into
+                            better decisions, practical application and
+                            new possibilities.
+                        </p>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- =================================================
+             07 — WIDER DOMAINS
+        ================================================== -->
+
+        <section class="section about-domains">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        BEYOND A SINGLE DISCIPLINE
+                    </div>
+
+                    <h2>
+                        Knowledge Across Domains.
+                    </h2>
+
+                    <p>
+                        YSG explores ideas across science, business and
+                        technology — with a focus on understanding how
+                        knowledge connects, evolves and creates practical
+                        value.
+                    </p>
+
+                </div>
+
+
+                <div class="domains-grid">
+
+
+                    <!-- SCIENCE -->
+
+                    <article class="domain-block">
+
+                        <div class="domain-number">
+                            01
+                        </div>
+
+                        <div class="domain-content">
+
+                            <h3>
+                                Science &amp; Knowledge
+                            </h3>
+
+                            <p>
+                                Scientific understanding, Electron Microscopy,
+                                life sciences and practical technical learning.
+                            </p>
+
+                            <div class="domain-tags">
+                                <span>Electron Microscopy</span>
+                                <span>Life Sciences</span>
+                                <span>Scientific Learning</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- BUSINESS -->
+
+                    <article class="domain-block">
+
+                        <div class="domain-number">
+                            02
+                        </div>
+
+                        <div class="domain-content">
+
+                            <h3>
+                                Business &amp; Management
+                            </h3>
+
+                            <p>
+                                Professional experience, decision-making,
+                                leadership perspectives and the practical
+                                dimensions of business.
+                            </p>
+
+                            <div class="domain-tags">
+                                <span>Experience</span>
+                                <span>Decisions</span>
+                                <span>Professional Perspectives</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- TECHNOLOGY -->
+
+                    <article class="domain-block">
+
+                        <div class="domain-number">
+                            03
+                        </div>
+
+                        <div class="domain-content">
+
+                            <h3>
+                                Technology &amp; Emerging Ideas
+                            </h3>
+
+                            <p>
+                                Artificial intelligence, automation and
+                                emerging technologies that are changing how
+                                knowledge is created and applied.
+                            </p>
+
+                            <div class="domain-tags">
+                                <span>AI</span>
+                                <span>Automation</span>
+                                <span>Emerging Technologies</span>
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- =================================================
+             08 — BUILDING, ONE BLOCK AT A TIME
+        ================================================== -->
+
+        <section class="section about-building">
+
+            <div class="container">
+
+                <div class="section-heading">
+
+                    <div class="eyebrow">
+                        THE BUILDING PROCESS
+                    </div>
+
+                    <h2>
+                        Building, One Block at a Time.
+                    </h2>
+
+                    <p>
+                        YSG develops its work progressively — turning ideas
+                        into knowledge, knowledge into resources, and
+                        resources into platforms that can create lasting value.
+                    </p>
+
+                </div>
+
+
+                <div class="building-track">
+
+                    <div class="building-step">
+
+                        <div class="building-number">
+                            01
+                        </div>
+
+                        <h3>Ideas</h3>
+
+                        <p>
+                            Questions, observations and possibilities.
+                        </p>
+
+                    </div>
+
+
+                    <div class="building-step">
+
+                        <div class="building-number">
+                            02
+                        </div>
+
+                        <h3>Knowledge</h3>
+
+                        <p>
+                            Ideas developed, organised and communicated.
+                        </p>
+
+                    </div>
+
+
+                    <div class="building-step">
+
+                        <div class="building-number">
+                            03
+                        </div>
+
+                        <h3>Resources</h3>
+
+                        <p>
+                            Knowledge shaped into useful references and learning.
+                        </p>
+
+                    </div>
+
+
+                    <div class="building-step">
+
+                        <div class="building-number">
+                            04
+                        </div>
+
+                        <h3>Platforms</h3>
+
+                        <p>
+                            Resources brought together through accessible platforms.
+                        </p>
+
+                    </div>
+
+
+                    <div class="building-step">
+
+                        <div class="building-number">
+                            05
+                        </div>
+
+                        <h3>Impact</h3>
+
+                        <p>
+                            Knowledge translated into practical value and new possibilities.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+                <!-- =================================================
+             09 — CONNECT
+        ================================================== -->
+
+        <section class="section about-connect">
+
+            <div class="container">
+
+                <div class="about-connect-inner">
+
+                    <div class="eyebrow">
+                        CONNECT WITH YSG
+                    </div>
+
+                    <h2>
+                        Be Part of What We’re Building.
+                    </h2>
+
+                    <p>
+                        Whether you are exploring an idea, looking for
+                        knowledge resources, or interested in contributing
+                        to what comes next, we welcome meaningful connections.
+                    </p>
+
+                    <a href="mailto:ysgglobalventures@gmail.com"
+                       class="btn btn-primary">
+                        Connect with YSG →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer class="site-footer">
+
+        <div class="container footer-main">
+
+            <div class="footer-brand">
+
+                <img
+                    src="../logo-header.png"
+                    alt="YSG Global Ventures"
+                >
+
+                <p>
+                    Building knowledge.<br>
+                    Creating legacy.
+                </p>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Explore</h4>
+
+                <a href="../vision-mission/index.html">
+                    Vision &amp; Mission
+                </a>
+
+                <a href="../index.html#ecosystem">
+                    Ecosystem
+                </a>
+
+                <a href="../index.html#publications">
+                    Publications
+                </a>
+
+                <a href="../em-resource-centre/index.html">
+                    PrEMReC
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Resources</h4>
+
+                <a href="../index.html#resources">
+                    Knowledge Resources
+                </a>
+
+                <a href="../index.html#resources">
+                    Professional Learning
+                </a>
+
+                <a href="../index.html#resources">
+                    Insights &amp; Perspectives
+                </a>
+
+                <a href="../index.html#publications">
+                    Books &amp; Publications
+                </a>
+
+            </div>
+
+
+            <div class="footer-column">
+
+                <h4>Connect</h4>
+
+                <a href="mailto:ysgglobalventures@gmail.com">
+                    Email YSG
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="container footer-bottom">
+
+            <span>
+                © 2026 YSG Global Ventures. All rights reserved.
+            </span>
+
+            <span>
+                Building Knowledge. Creating Legacy.
+            </span>
+
+        </div>
+
+    </footer>
+
+        <script>
+
+        /* =================================================
+           ABOUT PAGE — INTERACTIVE KNOWLEDGE JOURNEY
+        ================================================== */
+
+        const journeyTabs = document.querySelectorAll(".journey-tab");
+        const journeyContents = document.querySelectorAll(".journey-content");
+
+
+        journeyTabs.forEach(tab => {
+
+            tab.addEventListener("click", () => {
+
+                const selectedStage = tab.dataset.stage;
+
+
+                /* -----------------------------------------
+                   Update tab states
+                ------------------------------------------ */
+
+                journeyTabs.forEach(item => {
+
+                    item.classList.remove("active");
+                    item.setAttribute("aria-selected", "false");
+
+                });
+
+
+                tab.classList.add("active");
+                tab.setAttribute("aria-selected", "true");
+
+
+                /* -----------------------------------------
+                   Update content panel
+                ------------------------------------------ */
+
+                journeyContents.forEach(content => {
+
+                    content.classList.remove("active");
+
+                    if (content.dataset.content === selectedStage) {
+                        content.classList.add("active");
+                    }
+
+                });
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>
