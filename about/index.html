@@ -80,148 +80,304 @@
 
         }
 
-                /* =================================================
-           ABOUT PAGE — SECTION 04
-           Interactive Knowledge Journey
+            /* =================================================
+            ABOUT PAGE — SECTION 04
+            Six-Stage Interactive Journey
         ================================================== */
 
         .about-journey {
-            background: var(--mist);
-        }
-
-        .journey-tabs {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-            margin-top: 52px;
-        }
-
-        .journey-tab {
-            position: relative;
-            border: 0;
-            border-right: 1px solid var(--border);
-            background: transparent;
-            padding: 24px 28px;
-            text-align: left;
-            font-family: inherit;
-            font-size: 16px;
-            font-weight: 600;
-            color: var(--muted);
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .journey-tab:last-child {
-            border-right: 0;
-        }
-
-        .journey-tab span {
-            display: block;
-            margin-bottom: 8px;
-            color: var(--gold);
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 2px;
-        }
-
-        .journey-tab:hover {
-            color: var(--navy);
-            background: rgba(255, 255, 255, 0.55);
-        }
-
-        .journey-tab.active {
-            color: var(--navy);
             background: var(--white);
+            overflow: hidden;
         }
 
-        .journey-tab.active::after {
-            content: "";
-            position: absolute;
-            left: 28px;
-            right: 28px;
-            bottom: -1px;
-            height: 3px;
-            background: var(--gold);
+        .about-journey .section-heading {
+            max-width: 900px;
+            margin-bottom: 54px;
         }
 
 
-        .journey-panel {
-            min-height: 220px;
-            padding: 56px 0 20px;
+        /* -----------------------------------------------
+        JOURNEY VIEWPORT
+        ------------------------------------------------ */
+
+        .journey-viewport {
+            position: relative;
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 10px 0 24px;
+            scrollbar-width: none;
         }
 
-        .journey-content {
+        .journey-viewport::-webkit-scrollbar {
             display: none;
-            grid-template-columns: 100px 1fr;
-            gap: 32px;
-            align-items: start;
-            max-width: 850px;
         }
 
-        .journey-content.active {
-            display: grid;
+        .journey-track {
+            display: flex;
+            gap: 24px;
+            width: max-content;
         }
 
-        .journey-number {
+
+        /* -----------------------------------------------
+        JOURNEY CARD
+        ------------------------------------------------ */
+
+        .journey-card {
+            width: 360px;
+            flex: 0 0 360px;
+            background: var(--white);
+            border: 1px solid var(--border);
+            transition:
+                transform 0.4s ease,
+                opacity 0.4s ease,
+                box-shadow 0.4s ease;
+        }
+
+        .journey-card.active {
+            box-shadow: 0 14px 34px rgba(13, 49, 87, 0.10);
+            transform: translateY(-4px);
+        }
+
+
+        /* -----------------------------------------------
+        CARD HEADER
+        ------------------------------------------------ */
+
+        .journey-card-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 24px 26px 20px;
+        }
+
+        .journey-card-number {
             color: var(--gold);
-            font-size: 42px;
+            font-size: 24px;
             font-weight: 700;
             line-height: 1;
         }
 
-        .journey-content h3 {
-            margin: 0 0 16px;
-            color: var(--navy);
-            font-size: 30px;
+        .journey-card-divider {
+            width: 1px;
+            height: 28px;
+            background: var(--gold);
         }
 
-        .journey-content p {
-            max-width: 720px;
+        .journey-card-header h3 {
+            margin: 0;
+            color: var(--navy);
+            font-size: 20px;
+            line-height: 1.25;
+        }
+
+
+        /* -----------------------------------------------
+        CARD IMAGE
+        ------------------------------------------------ */
+
+        .journey-card-image {
+            width: 100%;
+            padding: 0 22px;
+        }
+
+        .journey-card-image img {
+            display: block;
+            width: 100%;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+
+        /* -----------------------------------------------
+        CARD CONTENT
+        ------------------------------------------------ */
+
+        .journey-card-body {
+            min-height: 130px;
+            padding: 20px 22px 26px;
+        }
+
+        .journey-card-body p {
             margin: 0;
             color: var(--muted);
-            font-size: 17px;
-            line-height: 1.8;
+            font-size: 15px;
+            line-height: 1.75;
         }
 
 
-        /* =================================================
-           SECTION 04 — RESPONSIVE
-        ================================================== */
+        /* -----------------------------------------------
+        JOURNEY CONTROLS
+        ------------------------------------------------ */
 
-        @media (max-width: 768px) {
+        .journey-controls {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
 
-            .journey-tabs {
-                grid-template-columns: repeat(2, 1fr);
+        .journey-counter {
+            color: var(--muted);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 2px;
+        }
+
+        .journey-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .journey-button {
+            width: 46px;
+            height: 46px;
+            border: 1px solid var(--border);
+            background: var(--white);
+            color: var(--navy);
+            font-family: inherit;
+            font-size: 21px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .journey-button:hover:not(:disabled) {
+            background: var(--navy);
+            color: var(--white);
+            border-color: var(--navy);
+        }
+
+        .journey-button:disabled {
+            opacity: 0.35;
+            cursor: default;
+        }
+
+
+        /* -----------------------------------------------
+        JOURNEY FOUNDATION
+        ------------------------------------------------ */
+
+        .journey-foundation {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr 1fr;
+            margin-top: 58px;
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .journey-foundation-item {
+            min-height: 110px;
+            display: flex;
+            align-items: center;
+            padding: 24px 28px;
+            border-right: 1px solid var(--border);
+        }
+
+        .journey-foundation-item:last-child {
+            border-right: 0;
+        }
+
+        .journey-foundation-item span {
+            display: block;
+            margin-bottom: 6px;
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 3px;
+        }
+
+        .journey-foundation-item small {
+            display: block;
+            color: var(--muted);
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+
+        /* -----------------------------------------------
+        RESPONSIVE
+        ------------------------------------------------ */
+
+        @media (max-width: 1000px) {
+
+            .journey-card {
+                width: 340px;
+                flex-basis: 340px;
             }
 
-            .journey-tab:nth-child(2) {
+            .journey-foundation {
+                grid-template-columns: 1fr;
+            }
+
+            .journey-foundation-item {
                 border-right: 0;
-            }
-
-            .journey-tab:nth-child(-n+2) {
                 border-bottom: 1px solid var(--border);
             }
 
-            .journey-panel {
-                padding-top: 40px;
-            }
-
-            .journey-content {
-                grid-template-columns: 1fr;
-                gap: 18px;
-            }
-
-            .journey-number {
-                font-size: 32px;
-            }
-
-            .journey-content h3 {
-                font-size: 26px;
+            .journey-foundation-item:last-child {
+                border-bottom: 0;
             }
 
         }
 
+
+        @media (max-width: 700px) {
+
+            .journey-viewport {
+                overflow-x: auto;
+                overflow-y: hidden;
+                scrollbar-width: none;
+                scroll-snap-type: x mandatory;
+            }
+
+            .journey-viewport::-webkit-scrollbar {
+                display: none;
+            }
+
+            .journey-track {
+                gap: 18px;
+                transform: none !important;
+            }
+
+            .journey-card {
+                width: min(82vw, 360px);
+                flex-basis: min(82vw, 360px);
+                scroll-snap-align: center;
+            }
+
+            .journey-controls {
+                margin-top: 18px;
+            }
+
+            .journey-card-header {
+                padding: 20px 22px 18px;
+            }
+
+            .journey-card-image {
+                padding: 0 22px;
+            }
+
+            .journey-card-body {
+                padding: 20px 22px 26px;
+            }
+
+        }
+
+
+        @media (max-width: 480px) {
+
+            .journey-card {
+                width: 84vw;
+                flex-basis: 84vw;
+            }
+
+            .journey-card-header h3 {
+                font-size: 18px;
+            }
+
+        }
                 /* =================================================
            ABOUT PAGE — SECTION 05
            Publications
@@ -326,6 +482,16 @@
             letter-spacing: 1.8px;
         }
 
+        .book-status {
+            margin: 0 0 10px;
+            color: var(--gold);
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            line-height: 1.4;
+            text-transform: uppercase;
+        }
+
         .about-publication-content h4 {
             margin: 0 0 12px;
             color: var(--navy);
@@ -338,6 +504,20 @@
             color: var(--muted);
             font-size: 14px;
             line-height: 1.7;
+        }
+
+                .upcoming-book {
+            color: var(--navy);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            line-height: 1.6;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .upcoming-book span {
+            display: block;
         }
 
 
@@ -925,6 +1105,14 @@
 
 }
 
+/* =================================================
+   ABOUT PAGE — SECTION 03 SPACING REFINEMENT
+================================================== */
+
+    .about-complementarity .section-heading {
+        margin-bottom: 44px;
+}
+
     </style>
 </head>
 
@@ -1208,153 +1396,391 @@
         </section>
 
                 <!-- =================================================
-             04 — FROM EXPERIENCE TO KNOWLEDGE
-        ================================================== -->
+                04 — FROM EXPERIENCE TO KNOWLEDGE
+            ================================================== -->
 
-        <section class="section about-journey">
+            <section class="section about-journey">
 
-            <div class="container">
+                <div class="container">
 
-                <div class="section-heading">
-                    <div class="eyebrow">
-                        THE JOURNEY
+                    <div class="section-heading">
+
+                        <div class="eyebrow">
+                            OUR JOURNEY
+                        </div>
+
+                        <h2>
+                            From Experience to Knowledge.
+                        </h2>
+
+                        <p>
+                            Turning real-world experience and specialist knowledge
+                            into practical resources for learning, application and
+                            future opportunities.
+                        </p>
+
                     </div>
 
-                    <h2>
-                        From Experience to Knowledge.
-                    </h2>
+
+                    <div class="journey-viewport" id="journeyViewport">
+
+                        <div class="journey-track" id="journeyTrack">
+
+
+                            <!-- 01 — PROFESSIONAL EXPERIENCE -->
+
+                            <article class="journey-card active">
+
+                                <div class="journey-card-header">
+
+                                    <div class="journey-card-number">
+                                        01
+                                    </div>
+
+                                    <div class="journey-card-divider"></div>
+
+                                    <h3>
+                                        Professional Experience
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="journey-card-image">
+
+                                    <img
+                                        src="../assets/images/journey-01-experience.png"
+                                        alt="Professional Experience"
+                                    >
+
+                                </div>
+
+
+                                <div class="journey-card-body">
+
+                                    <p>
+                                        Life Sciences, Pharmaceuticals, Electron
+                                        Microscopy, Business Development and
+                                        Commercial Operations.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- 02 — CONVERSATIONS & INSIGHTS -->
+
+                            <article class="journey-card">
+
+                                <div class="journey-card-header">
+
+                                    <div class="journey-card-number">
+                                        02
+                                    </div>
+
+                                    <div class="journey-card-divider"></div>
+
+                                    <h3>
+                                        Conversations &amp; Insights
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="journey-card-image">
+
+                                    <img
+                                        src="../assets/images/journey-02-conversations.png"
+                                        alt="Conversations and Insights"
+                                    >
+
+                                </div>
+
+
+                                <div class="journey-card-body">
+
+                                    <p>
+                                        Ideas shared. Needs identified. A vision
+                                        for better access to knowledge in
+                                        Electron Microscopy.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- 03 — SHARED VISION -->
+
+                            <article class="journey-card">
+
+                                <div class="journey-card-header">
+
+                                    <div class="journey-card-number">
+                                        03
+                                    </div>
+
+                                    <div class="journey-card-divider"></div>
+
+                                    <h3>
+                                        Shared Vision
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="journey-card-image">
+
+                                    <img
+                                        src="../assets/images/journey-03-vision.png"
+                                        alt="Shared Vision"
+                                    >
+
+                                </div>
+
+
+                                <div class="journey-card-body">
+
+                                    <p>
+                                        To make specialist knowledge accessible
+                                        and useful for students, researchers and
+                                        professionals.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- 04 — PUBLISHING INITIATIVE -->
+
+                            <article class="journey-card">
+
+                                <div class="journey-card-header">
+
+                                    <div class="journey-card-number">
+                                        04
+                                    </div>
+
+                                    <div class="journey-card-divider"></div>
+
+                                    <h3>
+                                        Publishing Initiative
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="journey-card-image">
+
+                                    <img
+                                        src="../assets/images/journey-04-publishing.png"
+                                        alt="Publishing Initiative"
+                                    >
+
+                                </div>
+
+
+                                <div class="journey-card-body">
+
+                                    <p>
+                                        A growing series of Electron Microscopy
+                                        books through YS Global Publications.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- 05 — PRACTICAL RESOURCES -->
+
+                            <article class="journey-card">
+
+                                <div class="journey-card-header">
+
+                                    <div class="journey-card-number">
+                                        05
+                                    </div>
+
+                                    <div class="journey-card-divider"></div>
+
+                                    <h3>
+                                        Practical Resources
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="journey-card-image">
+
+                                    <img
+                                        src="../assets/images/journey-05-resources.png"
+                                        alt="Practical Resources"
+                                    >
+
+                                </div>
+
+
+                                <div class="journey-card-body">
+
+                                    <p>
+                                        Knowledge base, guides, articles and
+                                        community contributions through PrEMReC.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                            <!-- 06 — LEARNING & OPPORTUNITIES -->
+
+                            <article class="journey-card">
+
+                                <div class="journey-card-header">
+
+                                    <div class="journey-card-number">
+                                        06
+                                    </div>
+
+                                    <div class="journey-card-divider"></div>
+
+                                    <h3>
+                                        Learning &amp; Opportunities
+                                    </h3>
+
+                                </div>
+
+
+                                <div class="journey-card-image">
+
+                                    <img
+                                        src="../assets/images/journey-06-opportunities.png"
+                                        alt="Learning and Opportunities"
+                                    >
+
+                                </div>
+
+
+                                <div class="journey-card-body">
+
+                                    <p>
+                                        Towards structured learning, professional
+                                        solutions and new opportunities.
+                                    </p>
+
+                                </div>
+
+                            </article>
+
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- JOURNEY CONTROLS -->
+
+                    <div class="journey-controls">
+
+                        <div
+                            class="journey-counter"
+                            id="journeyCounter"
+                        >
+                            01 / 06
+                        </div>
+
+
+                        <div class="journey-buttons">
+
+                            <button
+                                type="button"
+                                class="journey-button"
+                                id="journeyPrev"
+                                aria-label="Previous journey stage"
+                                disabled
+                            >
+                                ←
+                            </button>
+
+
+                            <button
+                                type="button"
+                                class="journey-button"
+                                id="journeyNext"
+                                aria-label="Next journey stage"
+                            >
+                                →
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- EXPERIENCE / KNOWLEDGE / EXPERTISE -->
+
+                    <div class="journey-foundation">
+
+                        <div class="journey-foundation-item">
+
+                            <div>
+
+                                <span>
+                                    EXPERIENCE
+                                </span>
+
+                                <small>
+                                    Industry &amp; Commercial Perspective
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="journey-foundation-item">
+
+                            <div>
+
+                                <span>
+                                    KNOWLEDGE
+                                </span>
+
+                                <small>
+                                    Publishing &nbsp; | &nbsp;
+                                    Resources &nbsp; | &nbsp;
+                                    Learning
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="journey-foundation-item">
+
+                            <div>
+
+                                <span>
+                                    EXPERTISE
+                                </span>
+
+                                <small>
+                                    Scientific &amp; Technical Knowledge
+                                </small>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
                 </div>
 
-
-                <div class="journey-tabs" role="tablist">
-
-                    <button
-                        class="journey-tab active"
-                        type="button"
-                        role="tab"
-                        aria-selected="true"
-                        data-stage="experience"
-                    >
-                        <span>01</span>
-                        Experience
-                    </button>
-
-
-                    <button
-                        class="journey-tab"
-                        type="button"
-                        role="tab"
-                        aria-selected="false"
-                        data-stage="insight"
-                    >
-                        <span>02</span>
-                        Insight
-                    </button>
-
-
-                    <button
-                        class="journey-tab"
-                        type="button"
-                        role="tab"
-                        aria-selected="false"
-                        data-stage="knowledge"
-                    >
-                        <span>03</span>
-                        Knowledge
-                    </button>
-
-
-                    <button
-                        class="journey-tab"
-                        type="button"
-                        role="tab"
-                        aria-selected="false"
-                        data-stage="application"
-                    >
-                        <span>04</span>
-                        Application
-                    </button>
-
-                </div>
-
-
-                <div class="journey-panel">
-
-                    <div
-                        class="journey-content active"
-                        data-content="experience"
-                    >
-                        <div class="journey-number">01</div>
-
-                        <div>
-                            <h3>Experience</h3>
-
-                            <p>
-                                Experience provides the context from which
-                                questions, observations and ideas emerge.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div
-                        class="journey-content"
-                        data-content="insight"
-                    >
-                        <div class="journey-number">02</div>
-
-                        <div>
-                            <h3>Insight</h3>
-
-                            <p>
-                                Reflection turns experience into insight —
-                                identifying patterns, connections and
-                                possibilities that may otherwise remain
-                                unnoticed.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div
-                        class="journey-content"
-                        data-content="knowledge"
-                    >
-                        <div class="journey-number">03</div>
-
-                        <div>
-                            <h3>Knowledge</h3>
-
-                            <p>
-                                Insight becomes knowledge when it can be
-                                organised, communicated, tested and shared.
-                            </p>
-                        </div>
-                    </div>
-
-
-                    <div
-                        class="journey-content"
-                        data-content="application"
-                    >
-                        <div class="journey-number">04</div>
-
-                        <div>
-                            <h3>Application</h3>
-
-                            <p>
-                                Knowledge creates value when it can be
-                                translated into learning, better decisions,
-                                practical solutions or new possibilities.
-                            </p>
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
-
-        </section>
+            </section>
 
                 <!-- =================================================
              05 — PUBLICATIONS
@@ -1474,6 +1900,43 @@
 
                         </article>
 
+                                                <!-- EM BOOK 03 — UPCOMING -->
+
+                        <article class="about-publication-card">
+
+                            <div class="about-publication-image">
+                                
+                                <img
+                                    src="../assets/images/electron-microscopy-in-pharmaceuticals.png"
+                                    alt="Electron Microscopy in Pharmaceuticals book cover" 
+                                >
+
+                            </div> 
+
+                            <div class="about-publication-content">
+
+                                <div class="book-meta">
+                                    ELECTRON MICROSCOPY · VOLUME 3
+                                </div>
+
+                                <h4>
+                                    Electron Microscopy in Pharmaceuticals
+                                </h4>
+
+                                <div class="book-status">
+                                    COMING SOON
+                                </div>
+
+                                <p>
+                                    Extending Electron Microscopy knowledge
+                                    into pharmaceutical environments and
+                                    practical applications.
+                                </p>
+
+                            </div>
+
+                        </article>
+
                     </div>
 
 
@@ -1559,6 +2022,39 @@
                                     Exploring how information abundance,
                                     artificial intelligence and uncertainty
                                     are reshaping modern decision-making.
+                                </p>
+
+                            </div>
+
+                        </article>
+
+                                                <!-- OTHER BOOK 03 -->
+
+                        <article class="about-publication-card">
+
+                            <div class="about-publication-image">
+                                
+                                <img
+                                    src="../assets/images/rules-before-profits.jpg"
+                                    alt="Rules Before Profits book cover"   
+                                >
+                            
+                            </div>
+
+                            <div class="about-publication-content">
+
+                                <div class="book-meta">
+                                    TRADING · DISCIPLINE
+                                </div>
+
+                                <h4>
+                                    Rules Before Profits
+                                </h4>
+
+                                <p>
+                                    A practical perspective on trading
+                                    discipline, risk awareness and the
+                                    principles that should come before profits.
                                 </p>
 
                             </div>
@@ -2079,59 +2575,304 @@
 
     </footer>
 
-        <script>
+    <script>
 
-        /* =================================================
-           ABOUT PAGE — INTERACTIVE KNOWLEDGE JOURNEY
-        ================================================== */
+    /* =================================================
+    ABOUT PAGE — SIX-STAGE INTERACTIVE JOURNEY
+    ================================================== */
 
-        const journeyTabs = document.querySelectorAll(".journey-tab");
-        const journeyContents = document.querySelectorAll(".journey-content");
+    document.addEventListener("DOMContentLoaded", function () {
 
+        const viewport =
+            document.getElementById("journeyViewport");
 
-        journeyTabs.forEach(tab => {
+        const cards =
+            document.querySelectorAll(".journey-card");
 
-            tab.addEventListener("click", () => {
+        const previous =
+            document.getElementById("journeyPrev");
 
-                const selectedStage = tab.dataset.stage;
+        const next =
+            document.getElementById("journeyNext");
 
-
-                /* -----------------------------------------
-                   Update tab states
-                ------------------------------------------ */
-
-                journeyTabs.forEach(item => {
-
-                    item.classList.remove("active");
-                    item.setAttribute("aria-selected", "false");
-
-                });
+        const counter =
+            document.getElementById("journeyCounter");
 
 
-                tab.classList.add("active");
-                tab.setAttribute("aria-selected", "true");
+        if (!viewport || !cards.length || !previous || !next) {
+            return;
+        }
 
 
-                /* -----------------------------------------
-                   Update content panel
-                ------------------------------------------ */
+        let currentIndex = 0;
 
-                journeyContents.forEach(content => {
 
-                    content.classList.remove("active");
+        /* -----------------------------------------------
+        POSITION ACTIVE CARD
+        ------------------------------------------------ */
 
-                    if (content.dataset.content === selectedStage) {
-                        content.classList.add("active");
-                    }
+        function moveToCard(index) {
 
-                });
+            currentIndex = Math.max(
+                0,
+                Math.min(index, cards.length - 1)
+            );
+
+
+            const card =
+                cards[currentIndex];
+
+
+            /*
+            * Put the selected card at the beginning
+            * of the visible journey track.
+            */
+
+            viewport.scrollTo({
+                left: card.offsetLeft,
+                behavior: "smooth"
+            });
+
+
+            /* Active state */
+
+            cards.forEach(function (item, itemIndex) {
+
+                item.classList.toggle(
+                    "active",
+                    itemIndex === currentIndex
+                );
+
+            });
+
+
+            /* Counter */
+
+            if (counter) {
+
+                counter.textContent =
+                    `${String(currentIndex + 1).padStart(2, "0")} / ${String(cards.length).padStart(2, "0")}`;
+
+            }
+
+
+            /* Navigation buttons */
+
+            previous.disabled =
+                currentIndex === 0;
+
+            next.disabled =
+                currentIndex === cards.length - 1;
+
+        }
+
+
+        /* -----------------------------------------------
+        NEXT
+        ------------------------------------------------ */
+
+        next.addEventListener("click", function () {
+
+            if (
+                currentIndex <
+                cards.length - 1
+            ) {
+
+                moveToCard(
+                    currentIndex + 1
+                );
+
+            }
+
+        });
+
+
+        /* -----------------------------------------------
+        PREVIOUS
+        ------------------------------------------------ */
+
+        previous.addEventListener("click", function () {
+
+            if (currentIndex > 0) {
+
+                moveToCard(
+                    currentIndex - 1
+                );
+
+            }
+
+        });
+
+
+        /* -----------------------------------------------
+        CLICK CARD
+        ------------------------------------------------ */
+
+        cards.forEach(function (card, index) {
+
+            card.addEventListener("click", function () {
+
+                moveToCard(index);
 
             });
 
         });
 
-    </script>
 
-</body>
+        /* -----------------------------------------------
+        MOUSE WHEEL
+        Natural horizontal movement
+        ------------------------------------------------ */
 
-</html>
+        viewport.addEventListener(
+            "wheel",
+            function (event) {
+
+                /*
+                * Convert both normal mouse-wheel movement
+                * and horizontal trackpad movement into
+                * horizontal card movement.
+                */
+
+                const movement =
+                    Math.abs(event.deltaX) >
+                    Math.abs(event.deltaY)
+                        ? event.deltaX
+                        : event.deltaY;
+
+
+                if (Math.abs(movement) < 1) {
+                    return;
+                }
+
+
+                /*
+                * Prevent the page itself from scrolling
+                * while the pointer is over the journey.
+                */
+
+                event.preventDefault();
+
+
+                /*
+                * Direct native horizontal movement.
+                * No card-by-card locking.
+                */
+
+                viewport.scrollLeft += movement;
+
+
+            },
+            { passive: false }
+        );
+
+
+        /* -----------------------------------------------
+        TRACK MANUAL SCROLL
+        Keeps counter / active state synchronised.
+        ------------------------------------------------ */
+
+        viewport.addEventListener(
+            "scroll",
+            function () {
+
+                if (wheelLocked) {
+                    return;
+                }
+
+
+                let closestIndex = 0;
+                let smallestDistance = Infinity;
+
+
+                cards.forEach(function (card, index) {
+
+                    const distance =
+                        Math.abs(
+                            card.offsetLeft -
+                            viewport.scrollLeft
+                        );
+
+
+                    if (distance < smallestDistance) {
+
+                        smallestDistance =
+                            distance;
+
+                        closestIndex =
+                            index;
+
+                    }
+
+                });
+
+
+                if (
+                    closestIndex !==
+                    currentIndex
+                ) {
+
+                    currentIndex =
+                        closestIndex;
+
+
+                    cards.forEach(
+                        function (item, itemIndex) {
+
+                            item.classList.toggle(
+                                "active",
+                                itemIndex === currentIndex
+                            );
+
+                        }
+                    );
+
+
+                    if (counter) {
+
+                        counter.textContent =
+                            `${String(currentIndex + 1).padStart(2, "0")} / ${String(cards.length).padStart(2, "0")}`;
+
+                    }
+
+
+                    previous.disabled =
+                        currentIndex === 0;
+
+                    next.disabled =
+                        currentIndex === cards.length - 1;
+
+                }
+
+            }
+        );
+
+
+        /* -----------------------------------------------
+        RESIZE
+        ------------------------------------------------ */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                moveToCard(
+                    currentIndex
+                );
+
+            }
+        );
+
+
+        /* -----------------------------------------------
+        INITIAL STATE
+        ------------------------------------------------ */
+
+        moveToCard(0);
+
+    });
+
+    </script>  
+
+<body>
+<html>
