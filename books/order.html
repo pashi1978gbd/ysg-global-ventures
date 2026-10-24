@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script src="https://sdk.cashfree.com/js/v3/cashfree.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Your Book | YS Global Publications</title>
+
+    <link rel="stylesheet" href="books.css">
+
+    <style>
+        .order-container {
+            max-width: 760px;
+            margin: 55px auto;
+            padding: 35px;
+            background: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 22px rgba(0,0,0,0.08);
+        }
+
+        .order-container h1 {
+            color: #14243a;
+            margin-bottom: 10px;
+        }
+
+        .order-intro {
+            color: #666;
+            margin-bottom: 28px;
+            line-height: 1.6;
+        }
+
+        .order-form label {
+            display: block;
+            margin: 18px 0 7px;
+            font-weight: 600;
+            color: #26364a;
+        }
+
+        .order-form input,
+        .order-form textarea,
+        .order-form select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d5d9df;
+            border-radius: 6px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .order-form textarea {
+            min-height: 95px;
+            resize: vertical;
+        }
+
+        .order-summary {
+            background: #f5f6f8;
+            padding: 20px;
+            margin-top: 25px;
+            border-radius: 8px;
+        }
+
+        .order-summary p {
+            margin: 8px 0;
+        }
+
+        .order-total {
+            font-size: 20px;
+            font-weight: 700;
+            color: #14243a;
+            border-top: 1px solid #ddd;
+            padding-top: 12px;
+            margin-top: 12px !important;
+        }
+
+        .shipping-message {
+            color: #247548;
+            font-size: 14px;
+        }
+
+        .order-notice {
+            margin-top: 22px;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #666;
+        }
+
+        .order-submit {
+            width: 100%;
+            margin-top: 25px;
+            padding: 15px;
+            background: #c49a43;
+            color: #ffffff;
+            border: none;
+            border-radius: 6px;
+            font-size: 16px;
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        .order-submit:hover {
+            background: #aa8232;
+        }
+
+        @media (max-width: 600px) {
+            .order-container {
+                margin: 25px 15px;
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<header style="text-align:center; padding:20px;">
+    <a href="index.html">
+        <img src="../assets/images/ys-global-publications-logo.jpg"
+             alt="YS Global Publications"
+             style="max-width:180px; max-height:180px;">
+    </a>
+</header>
+
+<main class="order-container">
+
+    <h1>Order Your Paperback</h1>
+
+    <p class="order-intro">
+        Thank you for choosing YS Global Publications.
+        Please provide your details below to place your book order.
+    </p>
+
+    <form class="order-form" id="bookOrderForm">
+
+        <label for="book">Select Book</label>
+        <select id="book" name="book" required>
+            <option value="">Choose a book</option>
+            <option value="48858" data-price="299">Kaaneyaada Gurutugalu – ₹299</option>
+            <option value="48842" data-price="249">The Forgotten Trunk – ₹249</option>
+            <option value="48837" data-price="499">The Decision Overload Economy – ₹499</option>
+            <option value="48833" data-price="399">Rules Before Profits – ₹399</option>
+            <option value="48790" data-price="649">Turning Points – ₹649</option>
+            <option value="48778" data-price="699">Electron Microscopy for Beginners – ₹699</option>
+            <option value="48775" data-price="749">Electron Microscopy in Life Sciences – ₹749</option>
+        </select>
+
+        <label for="quantity">Quantity</label>
+        <select id="quantity" name="quantity">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+
+        <label for="customerName">Full Name</label>
+        <input type="text" id="customerName" name="customerName"
+               autocomplete="name" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile"
+               autocomplete="tel" pattern="[0-9]{10}"
+               maxlength="10" placeholder="10-digit mobile number" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email"
+               autocomplete="email" required>
+
+        <label for="address">Delivery Address</label>
+        <textarea id="address" name="address"
+                  autocomplete="street-address" required></textarea>
+
+        <label for="city">City / Town</label>
+        <input type="text" id="city" name="city"
+               autocomplete="address-level2" required>
+
+        <label for="state">State</label>
+        <input type="text" id="state" name="state"
+               autocomplete="address-level1" required>
+
+        <label for="pincode">PIN Code</label>
+        <input type="text" id="pincode" name="pincode"
+               autocomplete="postal-code" pattern="[0-9]{6}"
+               maxlength="6" required>
+
+        <div class="order-summary">
+
+            <h3>Order Summary</h3>
+
+            <p id="summaryBook">Book: Not selected</p>
+            <p id="summaryQuantity">Quantity: 1</p>
+
+            <p class="shipping-message">
+                Free shipping across India
+            </p>
+
+            <p class="order-total" id="summaryTotal">
+                Total: ₹0
+            </p>
+
+        </div>
+
+        <p class="order-notice">
+            Your order will be processed after successful payment.
+            Your book will be printed and dispatched within
+            15 working days of order confirmation.
+            Courier delivery time is additional.
+        </p>
+
+        <button type="submit" class="order-submit">
+            Proceed to Payment
+        </button>
+
+    </form>
+
+</main>
+
+<footer style="text-align:center; padding:25px; color:#777;">
+    Published by YS Global Publications<br>
+    A publishing initiative of YSG Global Ventures
+</footer>
+
+<script>
+    const bookSelect = document.getElementById("book");
+    const quantitySelect = document.getElementById("quantity");
+
+    function updateOrderSummary() {
+
+        const selectedBook =
+            bookSelect.options[bookSelect.selectedIndex];
+
+        const price = Number(selectedBook.dataset.price || 0);
+        const quantity = Number(quantitySelect.value);
+        const total = price * quantity;
+
+        document.getElementById("summaryBook").textContent =
+            "Book: " + (selectedBook.value
+                ? selectedBook.text.split(" – ")[0]
+                : "Not selected");
+
+        document.getElementById("summaryQuantity").textContent =
+            "Quantity: " + quantity;
+
+        document.getElementById("summaryTotal").textContent =
+            "Total: ₹" + total;
+    }
+
+    bookSelect.addEventListener("change", updateOrderSummary);
+    quantitySelect.addEventListener("change", updateOrderSummary);
+
+    // Automatically select the book passed from the catalogue page
+    const urlParams = new URLSearchParams(window.location.search);
+    const bookSKU = urlParams.get("sku");
+
+    if (bookSKU) {
+        const matchingOption = Array.from(bookSelect.options)
+            .find(option => option.value === bookSKU);
+
+        if (matchingOption) {
+        bookSelect.value = bookSKU;
+        }
+    }
+
+    const cashfree = Cashfree({
+    mode: "sandbox"
+});
+
+document.getElementById("bookOrderForm")
+    .addEventListener("submit", async function(event) {
+        event.preventDefault();
+
+        const button = this.querySelector('button[type="submit"]');
+        button.disabled = true;
+        button.textContent = "Processing...";
+
+        try {
+            const response = await fetch(
+                "https://ysg-books-api.ysgglobalventures.workers.dev/orders/create",
+                {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({
+                        sku: bookSelect.value,
+                        quantity: quantitySelect.value,
+                        customer_name: document.getElementById("customerName").value.trim(),
+                        mobile: document.getElementById("mobile").value.trim(),
+                        email: document.getElementById("email").value.trim(),
+                        delivery_address: document.getElementById("address").value.trim(),
+                        city: document.getElementById("city").value.trim(),
+                        state: document.getElementById("state").value.trim(),
+                        pincode: document.getElementById("pincode").value.trim()
+                    })
+                }
+            );
+
+            const result = await response.json();
+
+            if (!response.ok || !result.payment_session_id) {
+                throw new Error(result.error || "Unable to create payment.");
+            }
+
+            await cashfree.checkout({
+                paymentSessionId: result.payment_session_id,
+                redirectTarget: "_self"
+            });
+
+        } catch (error) {
+            alert(error.message || "Unable to process your order.");
+            button.disabled = false;
+            button.textContent = "Proceed to Payment";
+        }
+    });
+
+    updateOrderSummary();
+</script>
+
+</body>
+</html>
